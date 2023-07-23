@@ -181,3 +181,5 @@ body.animate-headers ul.custom-list li {
 ::-webkit-selection {
     animation: highlight-animation 1s infinite;
 }
+
+/* This is a new feature */
