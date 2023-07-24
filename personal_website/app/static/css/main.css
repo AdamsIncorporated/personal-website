@@ -27,17 +27,7 @@ body {
 body.animate-dropdown h1,
 body.animate-dropdown h2,
 body.animate-dropdown p,
-body.animate-dropdown .container,
-body.animate-dropdown .section {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-body.animate-dropdown table tr {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+body.animate-dropdown table tr,
 body.animate-dropdown ul.custom-list li {
     opacity: 1;
     transform: translateY(0);
