@@ -11,17 +11,15 @@
     </head>
     <body>
 
-        <!-- Nav -->
-        <nav id="nav">
-            <ul>
-                <li><a href="{{ url_for('main.home') }}" class="active">Home</a></li>
-                <li><a href="{{ url_for('main.about') }}">About</a></li>
-                <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
-                <li><a href="{{ url_for('main.resume') }}">Resume</a></li>
-            </ul>
-        </nav>
-
         <header>
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{ url_for('main.home') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('main.about') }}">About</a></li>
+                    <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
+                    <li><a href="{{ url_for('main.resume') }}">Resume</a></li>
+                </ul>
+            </nav>
         </header>
 
         <main>
@@ -35,10 +33,9 @@
             </div>
         </footer>
 
-        <!-- Add this script at the end of your HTML body -->
         <script>
             window.addEventListener("load", () => {
-            document.body.classList.add("animate-headers");
+            document.body.classList.add("animate-dropdown");
             });
         </script>
 

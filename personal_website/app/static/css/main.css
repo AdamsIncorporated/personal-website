@@ -1,31 +1,20 @@
-@keyframes highlight-animation {
-
-    0%,
-    100% {
-        background-color: #444;
-        color: white;
-    }
-
-    50% {
-        background-color: #eee;
-        color: #444;
-    }
-}
-
-::selection {
-    animation: highlight-animation 1s infinite;
-}
-
-::-moz-selection {
-    animation: highlight-animation 1s infinite;
-}
-
-::-webkit-selection {
-    animation: highlight-animation 1s infinite;
-}
-
 * {
     cursor: url("/static/images/cursors/arrow.cur"), default;
+}
+
+*::-moz-selection {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+*::selection {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+*::-webkit-selection {
+    background-color: #333333;
+    color: #ffffff;
 }
 
 body {
@@ -35,21 +24,21 @@ body {
     padding: 0;
 }
 
-body.animate-headers h1,
-body.animate-headers h2,
-body.animate-headers p,
-body.animate-headers .container,
-body.animate-headers .section {
+body.animate-dropdown h1,
+body.animate-dropdown h2,
+body.animate-dropdown p,
+body.animate-dropdown .container,
+body.animate-dropdown .section {
     opacity: 1;
     transform: translateY(0);
 }
 
-body.animate-headers table tr {
+body.animate-dropdown table tr {
     opacity: 1;
     transform: translateY(0);
 }
 
-body.animate-headers ul.custom-list li {
+body.animate-dropdown ul.custom-list li {
     opacity: 1;
     transform: translateY(0);
 }
@@ -163,12 +152,12 @@ ul {
     padding: 0;
 }
 
-ul.custom-list {
+ul.resume-list {
     list-style-type: none;
     padding-left: 20px;
 }
 
-ul.custom-list li:before {
+ul.resume-list li:before {
     content: "\2022";
     font-size: 20px;
     margin-right: 10px;
