@@ -24,18 +24,12 @@ body {
     padding: 0;
 }
 
-body.animate-dropdown h1,
-body.animate-dropdown h2,
-body.animate-dropdown p,
-body.animate-dropdown table tr,
-body.animate-dropdown ul.custom-list li {
+div.post-animated-drawdown>* {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(10px);
+    transition: transform 0.70s ease, opacity 0.5s ease;
 }
 
-body:hover {
-    cursor: url("/static/images/cursors/link.cur"), pointer;
-}
 
 header {
     background-color: #333;
@@ -47,18 +41,15 @@ header {
 h1,
 h2 {
     margin-bottom: 1rem;
-    opacity: 0;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
-    transform: translateY(-100%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 40px;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 40px;
 }
 
 nav {
@@ -103,12 +94,9 @@ main {
     padding-right: .5in;
 }
 
-p,
-.container,
-.section {
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
+p.resume-sub-header1 {
+    font-weight: 600;
+    font-size: 20px;
 }
 
 table {
@@ -128,12 +116,6 @@ table th:hover {
     background-color: #e6e6e6;
     color: #949494;
     font-weight: 600;
-}
-
-table tr {
-    opacity: 0;
-    transform: translateY(-50%);
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
 
 ul {
