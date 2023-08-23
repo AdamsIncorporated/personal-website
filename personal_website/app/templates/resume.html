@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+{% block content %}
+<title>{{ title }}</title>
+<div class="pre-animated-drawdown resume">
+    <h1>Samuel Grant Adams</h1>
+    <p>737.701.0556 |
+        samuel.grant.adams@gmail.com |
+        https://www.linkedin.com/in/samuelgrantadams
+    </p>
+    <h1>Financial Analyst</h1>
+    <p>Well-motivated, self-driven, and service oriented. Strong analytical,
+        quantitative, critical thinking and problem-solving skills.
+        Proactive; internal drive to meet goals continuously and successfully.
+        Solid
+        grasp of tools for analyzing data. Ability to
+        interface and communicate with all levels of staff and management.
+        Demonstrated attention to detail, sense of urgency, and
+        ability to learn quickly. Able to work within and meet aggressive
+        deadlines
+        in a fast paced, changing, high energy
+        environment. High integrity. Core competencies:
+    </p>
+
+    <table>
+        <tr>
+            <td>DCF Modeling</td>
+            <td>Equity Research</td>
+            <td>Fixed-Income Analysis</td>
+        </tr>
+        <tr>
+            <td>Data Science</td>
+            <td>Dev Ops</td>
+            <td>Natural Language Processing</td>
+        </tr>
+        <tr>
+            <td>Texas Government Code</td>
+            <td>Legislative Procedures</td>
+            <td>Public Speaking</td>
+        </tr>
+    </table>
+
+    <h2>Education</h2>
+    <p class="resume-sub-header1">Master of Science, MSQFE; McCoy School of Business; Texas State
+        University 8/2022 – 5/2024</p>
+    <p class="resume-sub-header1">Bachelor of Science, Finance; The University of Texas at Dallas 8/2018 –
+        1/2021 </p>
+    <h2>Professional Experience</h2>
+    <p class="resume-sub-header1">Municipal Advisory Council of Texas (M.A.C.) – Austin, Texas</p>
+    <p>Financial Analyst 4/2022 – 11/2022</p>
+    <ul class="resume-list">
+        <li>Fixed-income, derivatives, and property analysis</li>
+        <li>Automated key process from one year to single executable task</li>
+        <li>Produced Texas Municipal Reports for public finance municipal market</li>
+    </ul>
+    <p class="resume-sub-header1">Binkley & Barfield, Inc – Houston, Texas 6/2021 – 4/2022</p>
+    <p>Accounting Intern</p>
+    <ul class="resume-list">
+        <li>Increased efficiency of accounting cycle for payables with coding automation</li>
+        <li>Processed invoices, collections, and financial reports</li>
+        <li>Provided financial planning and analysis</li>
+    </ul>
+    <h2>College Extracurriculars</h2>
+    <ul class="resume-list">
+        <li>CFA Challenge (MSQFE)</li>
+        <li>President, University of Texas Financial Literacy Club</li>
+        <li>Psi Zeta Chapter of the Chi Phi Fraternity</li>
+        <li>Business Professional of America</li>
+        <li>President of Toastmasters</li>
+    </ul>
+    <h2>Community Experience</h2>
+    <p class="resume-sub-header1">North Texas Entrepreneur Education and Training – Dallas, Texas 5/2021 – 8/2021</p>
+    <p>Volunteer Team Leader, Financial Budgeting and Forecasting</p>
+    <ul class="resume-list">
+        <li>Provided financial forecasting and accounting for projects. Prepare and analyze financial reports</li>
+        <li>Collaborated with management on presenting financial statements to the City of Dallas</li>
+        <li>Monitored and analyzed financial, statistical, and operational data trends</li>
+    </ul>
+    <h2>Techinical Skills</h2>
+    <ul class="resume-list">
+        <li>Proficient in MS Office, MS Excel, Power BI, HTML/CSS/SASS Website Design, Adobe Photoshop, Adobe Illustrator, 
+            Tableau, Python, SQL, JavaScript/TypeScript, C, C#, C++, Rust, Git, Stata, and R-Studio</li>
+    </ul>
+    <h2>Professional Designations</h2>
+    <ul class="resume-list">
+        <li>SIE</li>
+        <li>Series 63</li>
+    </ul>
+</div>
+
+<script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("Script executed");
+            const preDrawDown = document.querySelector('.pre-animated-drawdown');
+            if (preDrawDown) {
+                console.log("preDrawDown found");
+                preDrawDown.classList.remove("pre-animated-drawdown");
+                setTimeout(() => {
+                    console.log("Adding post-animated-drawdown");
+                    preDrawDown.classList.add("post-animated-drawdown");
+                }, 10);
+            }
+        });
+</script>
+
+{% endblock %}

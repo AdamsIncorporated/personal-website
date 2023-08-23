@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<style>
+    .container {
+        min-height: 120vh; /* Set the height to be 120% of the viewport height */
+    }
+    
+    .container-1 {
+        background-color: red;
+        color: white;
+    }
+    
+    .container-2 {
+        background-color: green;
+        color: white;
+    }
+    
+    .container-3 {
+        background-color: yellow;
+        color: black;
+    }
+    
+</style>
+
+<div class="container container-1">
+    Container 1
+</div>
+<div class="container container-2">
+    Container 2
+</div>
+<div class="container container-3">
+    Container 3
+</div>
+
+
+
+{% endblock %}
