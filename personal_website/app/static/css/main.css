@@ -22,6 +22,10 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
 }
 
 div.post-animated-drawdown>* {
@@ -29,7 +33,6 @@ div.post-animated-drawdown>* {
     transform: translateY(10px);
     transition: transform 0.70s ease, opacity 0.5s ease;
 }
-
 
 header {
     background-color: #333;
@@ -133,4 +136,22 @@ ul.resume-list li:before {
     content: "\2022";
     font-size: 20px;
     margin-right: 10px;
+}
+
+.mini-navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    top: 0;
+    right: 20px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background-color: #333;
+    border-radius: 50%;
+    margin: 5px 0;
+    cursor: pointer;
 }
