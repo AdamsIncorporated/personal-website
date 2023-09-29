@@ -8,13 +8,14 @@
     <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/pushbar.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 </head>
 
 <body>
 
     <aside data-pushbar-id="top" data-pushbar-direction="top">
-		<div class="title"><span data-pushbar-close class="close push_right"></span> Left sidebar menu</div>
+		<div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
 		<ul class="menu">
 			<li>Home</li>
 			<li>Products</li>
@@ -24,7 +25,7 @@
 		</ul>
 	</aside>
 
-    <div><button class="button-54" data-pushbar-target="top">Left pushbar</button></div>
+    <div><button class="button-54" data-pushbar-target="top">Links</button></div>
 
     <main class="pushbar_main_content">
         {% block content %}
