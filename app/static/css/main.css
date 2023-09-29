@@ -9,8 +9,6 @@
 /* Body element */
 body {
     font-family: Garamond, serif;
-    line-height: 1.6;
-    margin: 1.5in;
 }
 
 /* Post Animated Drawdown */
@@ -18,14 +16,6 @@ body {
     opacity: 1;
     transform: translateY(10px);
     transition: transform 0.70s ease, opacity 0.5s ease;
-}
-
-/* Header element */
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
 }
 
 /* Heading elements */
@@ -83,18 +73,11 @@ table th:hover {
     border-radius: var(--border-radius, 10px);
 }
 
-/* Unordered list */
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
 /* Section class */
 .section {
     height: 1000px;
-    background-color: #f0f0f0;
-    opacity: 0; /* Initially hidden */
+    background-color:#333;
+    opacity: 0;
 }
 
 /* Resume List */
@@ -110,33 +93,127 @@ ul {
     margin-right: 10px;
 }
 
-/* Navbar class */
-.navbar {
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    top: -70px; /* Initially hides the navbar above the viewport */
-    width: 100%;
-    transition: top 0.3s;
-    z-index: 1000;
+/* Style the header to span the entire width and have a grey background */
+header {
+    background-color: #333; /* Grey background color */
+    color: #fff; /* White text color */
+    margin: 0px;
+    padding: 0px;
 }
 
-/* Navbar items */
-.nav-item {
-    list-style: none;
-    display: inline-block;
-    padding: 20px;
-    cursor: pointer;
-    transition: color 0.3s;
-}
-
-/* Navbar item hover effect */
-.nav-item:hover {
-    color: #ff9900; /* Change color on hover */
+/* Reset margin and padding on the body element */
+body {
+    margin: 0.5in;
+    padding: 0.5in;
 }
 
 /* Additional styling for the content area */
 .content {
-    height: 2000px; /* To create a scrollable page */
+    height: 2000px;
     padding: 20px;
+}
+
+
+.wrapper {
+    max-width: 678px;
+    margin: auto;
+}
+
+pre {
+    border-left: 0.3rem solid #4039ff;
+}
+
+body {
+    background: #f2f2f2;
+}
+
+.push_left {
+    margin-left: 6px;
+}
+
+.push_right {
+    margin-right: 6px;
+}
+
+code, xmp {
+    white-space: normal !important;
+}
+
+textarea {
+    margin-bottom: 0px;
+    min-height: 200px;
+    line-height: 1;
+}
+
+.close {
+    width: 20px;
+    height: 21px;
+    position: relative;
+    display: inline-block;
+    vertical-align: text-bottom;
+    text-align: center;
+    cursor: pointer;
+}
+
+.close:before, .close:after {
+    position: absolute;
+    left: 10px;
+    content: ' ';
+    height: 21px;
+    width: 3px;
+    background-color: #fff;
+}
+
+.close:before {
+    transform: rotate(45deg);
+}
+
+.close:after {
+    transform: rotate(-45deg);
+}
+
+.card {
+    margin: 20px;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
+}
+
+.card_title, .title, [data-pushbar-id] {
+    background: #4039ff;
+    color: #fff;
+}
+
+.card_title, .title {
+    padding: 15px 20px;
+    font-weight: bold;
+}
+
+.card_title {
+    border-radius: 4px 4px 0px 0px;
+}
+
+.card_content {
+    padding: 15px;
+}
+
+a.button.getBtn {
+    margin-top: 16px;
+    background-color: #fff;
+    color: #4039ff;
+    border-color: #fff;
+}
+
+.small {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.menu li {
+    list-style: none;
+    padding: 15px 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: block;
+    margin: 0px;
+    color: rgba(255, 255, 255, 0.65);
 }

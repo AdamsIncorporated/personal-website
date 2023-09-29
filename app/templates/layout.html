@@ -1,38 +1,44 @@
 <!DOCTYPE html>
 <html lang="html">
-    <head>
-        <title>Sam Adams Personal Website</title>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon"
-            href="{{ url_for('static', filename='favicon.ico') }}">
-        <link rel="stylesheet"
-            href="{{ url_for('static', filename='css/main.css') }}">
-    </head>
-    <body>
 
-        <header>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="{{ url_for('main.home') }}" class="active">Home</a></li>
-                    <li><a href="{{ url_for('main.resume') }}">Resume</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <title>Sam Adams Personal Website</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
+</head>
 
-        <main>
-            {% block content %}
-            {% endblock %}
-        </main>
+<body>
 
-        <footer>
-        </footer>
+    <aside data-pushbar-id="top" data-pushbar-direction="top">
+		<div class="title"><span data-pushbar-close class="close push_right"></span> Left sidebar menu</div>
+		<ul class="menu">
+			<li>Home</li>
+			<li>Products</li>
+			<li>About</li>
+			<li>Contact</li>
+			<li>Github</li>
+		</ul>
+	</aside>
 
-    </body>
+    <div><button class="button-54" data-pushbar-target="top">Left pushbar</button></div>
 
-    <!-- Scripts -->
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+    <main class="pushbar_main_content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer>
+    </footer>
+
+</body>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/scrollreveal"></script>
+<script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
+<script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
 
 </html>
