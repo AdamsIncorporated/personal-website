@@ -1,0 +1,142 @@
+/* Universal selectors */
+*,
+*::-moz-selection,
+*::selection,
+*::-webkit-selection {
+    cursor: url("/static/images/cursors/arrow.cur"), default;
+}
+
+/* Body element */
+body {
+    font-family: Garamond, serif;
+    line-height: 1.6;
+    margin: 1.5in;
+}
+
+/* Post Animated Drawdown */
+.post-animated-drawdown > * {
+    opacity: 1;
+    transform: translateY(10px);
+    transition: transform 0.70s ease, opacity 0.5s ease;
+}
+
+/* Header element */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+/* Heading elements */
+h1,
+h2 {
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* H1 element */
+h1 {
+    font-size: 40px;
+}
+
+/* H2 element */
+h2 {
+    font-size: 40px;
+}
+
+/* Resume class */
+.resume {
+    background-color: #f7f7f7;
+    color: #333;
+    font-weight: 400;
+    margin: 0.5in;
+    padding: 0.5in;
+    border-radius: var(--border-radius, 10px);
+}
+
+/* Resume Sub-header 1 */
+.resume-sub-header1 {
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Table element */
+table {
+    border-collapse: collapse;
+    margin-top: 0.5in;
+    width: 100%;
+}
+
+/* Table cells */
+table td,
+table th {
+    margin: 10px;
+    padding: 4px;
+}
+
+/* Table cell hover effect */
+table td:hover,
+table th:hover {
+    background-color: #e6e6e6;
+    color: #949494;
+    border-radius: var(--border-radius, 10px);
+}
+
+/* Unordered list */
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Section class */
+.section {
+    height: 1000px;
+    background-color: #f0f0f0;
+    opacity: 0; /* Initially hidden */
+}
+
+/* Resume List */
+.resume-list {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+/* Resume List Item */
+.resume-list li:before {
+    content: "\2022";
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+/* Navbar class */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    position: fixed;
+    top: -70px; /* Initially hides the navbar above the viewport */
+    width: 100%;
+    transition: top 0.3s;
+    z-index: 1000;
+}
+
+/* Navbar items */
+.nav-item {
+    list-style: none;
+    display: inline-block;
+    padding: 20px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+/* Navbar item hover effect */
+.nav-item:hover {
+    color: #ff9900; /* Change color on hover */
+}
+
+/* Additional styling for the content area */
+.content {
+    height: 2000px; /* To create a scrollable page */
+    padding: 20px;
+}

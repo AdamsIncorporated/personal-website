@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="html">
+    <head>
+        <title>Sam Adams Personal Website</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="shortcut icon"
+            href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet"
+            href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+    <body>
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="{{ url_for('main.home') }}" class="active">Home</a></li>
+                    <li><a href="{{ url_for('main.resume') }}">Resume</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            {% block content %}
+            {% endblock %}
+        </main>
+
+        <footer>
+        </footer>
+
+    </body>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='scripts/navbar.js') }}"></script>
+
+</html>
