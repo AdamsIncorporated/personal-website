@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pushbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/optiscroll/dist/optiscroll.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 </head>
 
@@ -25,8 +26,8 @@
         </ul>
     </aside>
 
-    <div class="slimScroll">
-        Long Content Here
+    <div id="demo" class="optiscroll">
+        Scroll
     </div>
 
     <div class="button-container"><button class="button-54" data-pushbar-target="top">Links</button></div>
@@ -42,11 +43,11 @@
 </body>
 
 <!-- Import Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
 
 <!-- Source Scripts-->
 <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
-<script src="{{ url_for('static', filename='scripts/slim-scroll-master/dist/slimscroll.min.js') }}"></script>
-
+<script src="{{ url_for('static', filename='node_modules/optiscroll/dist/jquery.optiscroll.min.js')}}"></script>
 </html>
