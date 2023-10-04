@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 </head>
 
-<body class="nano">
+<body>
 
     <aside data-pushbar-id="top" data-pushbar-direction="top">
         <div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
@@ -28,12 +28,10 @@
 
     <div class="button-container"><button class="button-54" data-pushbar-target="top">Links</button></div>
 
-    <div class="nano-content">
-        <main class="pushbar_main_content">
-            {% block content %}
-            {% endblock %}
-        </main>
-    </div>
+    <main class="pushbar_main_content">
+        {% block content %}
+        {% endblock %}
+    </main>
 
     <footer>
     </footer>
