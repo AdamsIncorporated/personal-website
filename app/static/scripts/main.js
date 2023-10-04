@@ -1,3 +1,4 @@
+// Section scroll
 ScrollReveal().reveal(".section", {
     duration: 500,
     delay: 200,
@@ -9,8 +10,11 @@ ScrollReveal().reveal(".section", {
     },
 });
 
-
+// Pushbar button
 const pushbar = new Pushbar({
     blur: true,
     overlay: true,
 });
+
+
+$(".nano").nanoScroller();
