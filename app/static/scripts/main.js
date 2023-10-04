@@ -1,15 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
-    ScrollReveal().reveal('.section', {
-        delay: 200,
-        distance: '50px',
-        origin: 'bottom',
-        interval: 100,
+    // Initialize ScrollReveal
+    ScrollReveal().reveal(".section", {
         duration: 1000,
-        easing: 'ease-in-out',
-        opacity: 0,
-        scale: 1,
+        delay: 200,
+        origin: "bottom",
+        distance: "50px",
+        easing: "ease-in",
+        afterReveal: (el) => {
+            el.style.opacity = 1;
+        },
     });
 });
+
 
 const pushbar = new Pushbar({
     blur: true,

@@ -1,4 +1,3 @@
-/* Universal selectors */
 *,
 *::-moz-selection,
 *::selection,
@@ -6,36 +5,30 @@
     cursor: url("/static/images/cursors/arrow.cur"), default;
 }
 
-/* Body element */
 body {
     font-family: Garamond, serif;
 }
 
-/* Post Animated Drawdown */
-.post-animated-drawdown > * {
+.post-animated-drawdown>* {
     opacity: 1;
     transform: translateY(10px);
     transition: transform 0.70s ease, opacity 0.5s ease;
 }
 
-/* Heading elements */
 h1,
 h2 {
     margin-bottom: 1rem;
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
-/* H1 element */
 h1 {
     font-size: 40px;
 }
 
-/* H2 element */
 h2 {
     font-size: 40px;
 }
 
-/* Resume class */
 .resume {
     background-color: #f7f7f7;
     color: #333;
@@ -45,27 +38,23 @@ h2 {
     border-radius: var(--border-radius, 10px);
 }
 
-/* Resume Sub-header 1 */
 .resume-sub-header1 {
     font-weight: 600;
     font-size: 20px;
 }
 
-/* Table element */
 table {
     border-collapse: collapse;
     margin-top: 0.5in;
     width: 100%;
 }
 
-/* Table cells */
 table td,
 table th {
     margin: 10px;
     padding: 4px;
 }
 
-/* Table cell hover effect */
 table td:hover,
 table th:hover {
     background-color: #e6e6e6;
@@ -73,40 +62,24 @@ table th:hover {
     border-radius: var(--border-radius, 10px);
 }
 
-/* Section class */
-.section {
-    height: 1000px;
-    background-color:#333;
-    opacity: 0;
-}
-
-/* Resume List */
 .resume-list {
     list-style-type: none;
     padding-left: 20px;
 }
 
-/* Resume List Item */
 .resume-list li:before {
     content: "\2022";
     font-size: 20px;
     margin-right: 10px;
 }
 
-/* Reset margin and padding on the body element */
-body {
-    margin: 0.5in;
-    padding: 0.5in;
-}
-
-/* Additional styling for the content area */
-.content {
-    height: 2000px;
-    padding: 20px;
-}
-
-
 .section {
-    background-color: #333;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
     color: white;
 }
