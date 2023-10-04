@@ -5,7 +5,7 @@
     <title>Sam Adams Personal Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pushbar.css') }}">
@@ -17,11 +17,11 @@
     <aside data-pushbar-id="top" data-pushbar-direction="top">
 		<div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
 		<ul class="menu">
-			<li><a href="{{ url_for('home') }}">Home</a></li>
-			<li>About</li>
-			<li>Projects</li>
-			<li>Resume</li>
-			<li>Github</li>
+			<li><a href="{{ url_for('main.home') }}">🏡 Home</a></li>
+			<li><a href="#">👨🏻‍🎓 About</a></li>
+			<li><a href="#">🚧 Projects</a></li>
+			<li><a href="{{ url_for('main.resume') }}">📓 Resume</a></li>
+			<li><a href="https://github.com/AdamsIncorporated" target="_blank">🗃️ Github</a></li>
 		</ul>
 	</aside>
 

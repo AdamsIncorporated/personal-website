@@ -1,5 +1,5 @@
 ScrollReveal().reveal(".section", {
-    duration: 1000,
+    duration: 500,
     delay: 200,
     origin: "bottom",
     distance: "50px",
