@@ -1,15 +1,12 @@
-document.addEventListener("DOMContentLoaded", function () {
-    // Initialize ScrollReveal
-    ScrollReveal().reveal(".section", {
-        duration: 1000,
-        delay: 200,
-        origin: "bottom",
-        distance: "50px",
-        easing: "ease-in",
-        afterReveal: (el) => {
-            el.style.opacity = 1;
-        },
-    });
+ScrollReveal().reveal(".section", {
+    duration: 1000,
+    delay: 200,
+    origin: "bottom",
+    distance: "50px",
+    easing: "ease-in",
+    afterReveal: (el) => {
+        el.style.opacity = 1;
+    },
 });
 
 

@@ -1,5 +1,5 @@
 .button-54 {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Tickerbit", sans-serif;
   font-size: 16px;
   letter-spacing: 2px;
   text-decoration: none;
@@ -25,4 +25,11 @@
   .button-54 {
     padding: 0.25em 0.75em;
   }
+}
+
+.button-container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
 }
