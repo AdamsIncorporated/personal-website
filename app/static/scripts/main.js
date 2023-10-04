@@ -14,3 +14,11 @@ const pushbar = new Pushbar({
     blur: true,
     overlay: true,
 });
+
+var element = document.querySelectorAll('.slimScroll');
+var instance = new slimScroll(element, {
+    'wrapperClass': 'scroll-wrapper unselectable mac',
+    'scrollBarContainerClass': 'scrollBarContainer',
+    'scrollBarContainerSpecialClass': 'animate',
+    'scrollBarClass': 'scroll'
+});

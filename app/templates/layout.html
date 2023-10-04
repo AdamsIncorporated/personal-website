@@ -15,15 +15,19 @@
 <body>
 
     <aside data-pushbar-id="top" data-pushbar-direction="top">
-		<div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
-		<ul class="menu">
-			<li><a href="{{ url_for('main.home') }}">🏡 Home</a></li>
-			<li><a href="#">👨🏻‍🎓 About</a></li>
-			<li><a href="#">🚧 Projects</a></li>
-			<li><a href="{{ url_for('main.resume') }}">📓 Resume</a></li>
-			<li><a href="https://github.com/AdamsIncorporated" target="_blank">🗃️ Github</a></li>
-		</ul>
-	</aside>
+        <div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
+        <ul class="menu">
+            <li><a href="{{ url_for('main.home') }}">🏡 Home</a></li>
+            <li><a href="#">👨🏻‍🎓 About</a></li>
+            <li><a href="#">🚧 Projects</a></li>
+            <li><a href="{{ url_for('main.resume') }}">📓 Resume</a></li>
+            <li><a href="https://github.com/AdamsIncorporated" target="_blank">🗃️ Github</a></li>
+        </ul>
+    </aside>
+
+    <div class="slimScroll">
+        Long Content Here
+    </div>
 
     <div class="button-container"><button class="button-54" data-pushbar-target="top">Links</button></div>
 
@@ -43,5 +47,6 @@
 
 <!-- Source Scripts-->
 <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+<script src="{{ url_for('static', filename='scripts/slim-scroll-master/dist/slimscroll.min.js') }}"></script>
 
 </html>

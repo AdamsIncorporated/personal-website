@@ -1,0 +1,7 @@
+.slimScroll {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  height: 200px; 
+  width: 380px;
+}
