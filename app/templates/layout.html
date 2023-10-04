@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pushbar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='node_modules/optiscroll/dist/optiscroll.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 </head>
 
-<body>
+<body class="nano">
 
     <aside data-pushbar-id="top" data-pushbar-direction="top">
         <div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
@@ -26,16 +26,14 @@
         </ul>
     </aside>
 
-    <div id="demo" class="optiscroll">
-        Scroll
-    </div>
-
     <div class="button-container"><button class="button-54" data-pushbar-target="top">Links</button></div>
 
-    <main class="pushbar_main_content">
-        {% block content %}
-        {% endblock %}
-    </main>
+    <div class="nano-content">
+        <main class="pushbar_main_content">
+            {% block content %}
+            {% endblock %}
+        </main>
+    </div>
 
     <footer>
     </footer>
@@ -49,5 +47,5 @@
 
 <!-- Source Scripts-->
 <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
-<script src="{{ url_for('static', filename='node_modules/optiscroll/dist/jquery.optiscroll.min.js')}}"></script>
+
 </html>
