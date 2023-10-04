@@ -1,12 +1,19 @@
+@font-face {
+    font-family: 'Tickerbit';
+    src: url('../fonts/Tickerbit-regular.woff2') format('woff2'),
+         url('../fonts/Tickerbit-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *,
 *::-moz-selection,
 *::selection,
 *::-webkit-selection {
     cursor: url("/static/images/cursors/arrow.cur"), default;
-}
+    cursor: url("/static/images/cursors/arrow.cur"), default;
+    font-family: 'Tickerbit', sans-serif;
 
-body {
-    font-family: Garamond, serif;
 }
 
 .post-animated-drawdown>* {
