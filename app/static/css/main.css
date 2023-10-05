@@ -54,10 +54,6 @@ table th:hover {
     transition: opacity 0.5s;
 }
 
-.body {
-    margin: 0;
-}
-
 .resume {
     background-color: #f2f2f2;
     box-shadow: 10px 0px 10px #949494;
@@ -98,9 +94,6 @@ table th:hover {
     font-weight: 500;
 }
 
-.resume-italic {
-    font-family: 'Tickerbit-Italic', sans-serif;
-}
 
 .section {
     align-items: center;
@@ -131,4 +124,13 @@ table th:hover {
     box-shadow: 1px 1px #373737, 2px 2px #373737, 3px 3px #373737, 4px 4px #373737, 5px 5px #373737, 6px 6px #373737;
     transform: translateX(-3px);
     transition: .5s ease;
+}
+
+.date-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.date-row p {
+    font-family: 'Tickerbit-Italic', sans-serif;
 }
