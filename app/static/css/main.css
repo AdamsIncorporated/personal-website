@@ -112,3 +112,23 @@ table th:hover {
     opacity: 0;
     transition: opacity 0.5s;
 }
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.shadow img {
+    margin-bottom: 10px;
+    margin-right: 30px;
+    transition: .5s ease;
+    width: 60px;
+}
+
+.shadow img:hover {
+    -webkit-transform: translateX(-3px);
+    box-shadow: 1px 1px #373737, 2px 2px #373737, 3px 3px #373737, 4px 4px #373737, 5px 5px #373737, 6px 6px #373737;
+    transform: translateX(-3px);
+    transition: .5s ease;
+}
