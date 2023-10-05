@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/pushbar.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/textgrow.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
 </head>
 
@@ -19,7 +20,7 @@
         <div class="title"><span data-pushbar-close class="close push_right"></span>Links</div>
         <ul class="menu">
             <li><a href="{{ url_for('main.home') }}">🏡 Home</a></li>
-            <li><a href="#">👨🏻‍🎓 About</a></li>
+            <li><a href="{{ url_for('main.about') }}">👨🏻‍🎓 About</a></li>
             <li><a href="#">🚧 Projects</a></li>
             <li><a href="{{ url_for('main.resume') }}">📓 Resume</a></li>
             <li><a href="https://github.com/AdamsIncorporated" target="_blank">🗃️ Github</a></li>
