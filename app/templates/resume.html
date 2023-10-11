@@ -122,6 +122,8 @@
         <li>Monitored and analyzed financial, statistical, and operational data trends</li>
     </ul>
     <h2 class="resume-header">Techinical Skills</h2>
+
+    <!-- General Production -->
     <div class="language-logos">
         <div><img src="{{ url_for('static', filename='images/language-logos/C.svg') }}" alt="Language Logo Image">
         </div>
@@ -177,7 +179,7 @@
     <div class="language-logos">
         <div><img src="{{ url_for('static', filename='images/language-logos/Julia.svg') }}" alt="Language Logo Image">
         </div>
-        <div><img src="{{ url_for('static', filename='images/language-logos/Lua.svg') }}" alt="Language Logo Image">
+        <div><img src="{{ url_for('static', filename='images/language-logos/Scala.svg') }}" alt="Language Logo Image">
         </div>
         <div><img src="{{ url_for('static', filename='images/language-logos/Perl.svg') }}" alt="Language Logo Image">
         </div>
@@ -199,12 +201,14 @@
         justify-content: start;
         margin-bottom: 10px;
     }
-
+    
     .language-logos img {
-        width: 75px;
+        max-width: 50%;
+        height: auto;
         margin-bottom: 20px;
         margin-right: 10px;
     }
+    
 </style>
 
 {% endblock %}
