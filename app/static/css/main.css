@@ -89,7 +89,7 @@ table th:hover {
     text-shadow: 2px 0px 2px #949494;
 }
 
-.resume-header2 {
+.resume-sub-header {
     font-size: 20px;
     font-weight: 500;
 }
@@ -133,4 +133,17 @@ table th:hover {
 
 .date-row p {
     font-family: 'Tickerbit-Italic', sans-serif;
+}
+
+.language-logos {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.language-logos img {
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+    margin-right: 10px;
 }

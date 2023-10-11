@@ -123,6 +123,7 @@
     </ul>
     <h2 class="resume-header">Techinical Skills</h2>
 
+    <h3 class="resume-sub-header">General Purpose</h3>
     <!-- General Production -->
     <div class="language-logos">
         <div><img src="{{ url_for('static', filename='images/language-logos/C.svg') }}" alt="Language Logo Image">
@@ -141,6 +142,7 @@
         </div>
     </div>
 
+    <h3 class="resume-sub-header">Web Development</h3>
     <!-- Web Languages -->
     <div class="language-logos">
         <div><img src="{{ url_for('static', filename='images/language-logos/JS.svg') }}" alt="Language Logo Image">
@@ -153,6 +155,7 @@
         </div>
     </div>
 
+    <h3 class="resume-sub-header">Applications</h3>
     <!-- Apps -->
     <div class="language-logos">
         <div><img src="{{ url_for('static', filename='images/language-logos/Stata.svg') }}" alt="Language Logo Image">
@@ -175,6 +178,7 @@
         </div>
     </div>
 
+    <h3 class="resume-sub-header">Data Science</h3>
     <!-- Data Science -->
     <div class="language-logos">
         <div><img src="{{ url_for('static', filename='images/language-logos/Julia.svg') }}" alt="Language Logo Image">
@@ -188,27 +192,12 @@
         <div><img src="{{ url_for('static', filename='images/language-logos/R.svg') }}" alt="Language Logo Image">
         </div>
     </div>
+
     <h2 class="resume-header">Professional Designations</h2>
     <ul class="resume-list">
         <li>SIE</li>
         <li>Series 63</li>
     </ul>
 </div>
-
-<style>
-    .language-logos {
-        display: flex;
-        justify-content: start;
-        margin-bottom: 10px;
-    }
-    
-    .language-logos img {
-        max-width: 50%;
-        height: auto;
-        margin-bottom: 20px;
-        margin-right: 10px;
-    }
-    
-</style>
 
 {% endblock %}
