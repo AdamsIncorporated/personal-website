@@ -147,3 +147,10 @@ table th:hover {
     margin-bottom: 20px;
     margin-right: 10px;
 }
+
+.resume-button-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999;
+}

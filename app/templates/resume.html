@@ -2,6 +2,13 @@
 {% block content %}
 
 <title>{{ title }}</title>
+
+<div class="resume-button-container">
+    <a href="{{ url_for('main.download_pdf') }}" class="button-54" download>
+        <i class="fas fa-download"></i>
+    </a>
+</div>
+
 <div class="resume">
     <h1 class="resume-title">Samuel Grant Adams</h1>
     <div class="social-media-icons">
@@ -67,8 +74,9 @@
     </div>
 
     <ul class="resume-list">
-        <li>Designed queries for financial annual reports to congress</li>
-        <li>Created Flask web applications for bond counsel data portal and data visualization</li>
+        <li>Crafted triggers, tables, and queries for smss Database</li>
+        <li>Crafted Annual Report for Texas House of Legislature</li>
+        <li>Crafted Flask web applications for bond counsel data portal and data visualization</li>
         <li>Curated SMSS SQL Database</li>
         <li>Created NLP software to extract data from web forms</li>
     </ul>
@@ -155,6 +163,21 @@
         </div>
     </div>
 
+    <h3 class="resume-sub-header">Data Science</h3>
+    <!-- Data Science -->
+    <div class="language-logos">
+        <div><img src="{{ url_for('static', filename='images/language-logos/Julia.svg') }}" alt="Language Logo Image">
+        </div>
+        <div><img src="{{ url_for('static', filename='images/language-logos/Scala.svg') }}" alt="Language Logo Image">
+        </div>
+        <div><img src="{{ url_for('static', filename='images/language-logos/Perl.svg') }}" alt="Language Logo Image">
+        </div>
+        <div><img src="{{ url_for('static', filename='images/language-logos/Python.svg') }}" alt="Language Logo Image">
+        </div>
+        <div><img src="{{ url_for('static', filename='images/language-logos/R.svg') }}" alt="Language Logo Image">
+        </div>
+    </div>
+
     <h3 class="resume-sub-header">Applications</h3>
     <!-- Apps -->
     <div class="language-logos">
@@ -175,21 +198,6 @@
         </div>
         <div><img src="{{ url_for('static', filename='images/language-logos/Power BI.svg') }}"
                 alt="Language Logo Image">
-        </div>
-    </div>
-
-    <h3 class="resume-sub-header">Data Science</h3>
-    <!-- Data Science -->
-    <div class="language-logos">
-        <div><img src="{{ url_for('static', filename='images/language-logos/Julia.svg') }}" alt="Language Logo Image">
-        </div>
-        <div><img src="{{ url_for('static', filename='images/language-logos/Scala.svg') }}" alt="Language Logo Image">
-        </div>
-        <div><img src="{{ url_for('static', filename='images/language-logos/Perl.svg') }}" alt="Language Logo Image">
-        </div>
-        <div><img src="{{ url_for('static', filename='images/language-logos/Python.svg') }}" alt="Language Logo Image">
-        </div>
-        <div><img src="{{ url_for('static', filename='images/language-logos/R.svg') }}" alt="Language Logo Image">
         </div>
     </div>
 
