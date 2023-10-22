@@ -1,7 +1,0 @@
-spec:
-  name: Personal-Website
-  services:
-  - name: web
-    git:
-      branch: master
-      repo_clone_url: https://github.com/AdamsIncorporated/Personal-Website.git
