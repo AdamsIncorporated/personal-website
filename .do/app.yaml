@@ -1,0 +1,6 @@
+name: Personal-Website
+services:
+- name: web
+  github:
+    repo: AdamsIncorporated/Personal-Website
+    branch: master
