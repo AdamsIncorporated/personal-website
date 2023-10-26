@@ -10,8 +10,8 @@ COPY . /
 # Install any needed packages specified in requirements.txt
 RUN pip install -r requirements.txt
 
-# Make port 80 available to the world outside this container
-EXPOSE 80
+# # Make port 80 available to the world outside this container
+EXPOSE 5000
 
 # Run app.py when the container launches
-CMD ["waitress-serve", "--listen=*:80", "--debug", "__init__:app"]
+CMD ["waitress-serve", "--listen=*:5000", "__init__:app"]
