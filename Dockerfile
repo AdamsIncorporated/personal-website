@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 80
 
 # Run app.py when the container launches
-CMD ["waitress-serve", "--listen=*:80", "__init__:app"]
+CMD ["waitress-serve", "--listen=*:80", "--debug", "__init__:app"]
