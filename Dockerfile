@@ -14,4 +14,4 @@ RUN pip install -r requirements.txt
 EXPOSE 80
 
 # Run app.py when the container launches
-CMD ["gunicorn", "--bind", "0.0.0.0:80", "app:app"]
+CMD ["waitress-serve", "--listen=*:80", "__init__:app"]
