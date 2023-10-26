@@ -8,7 +8,8 @@ WORKDIR /
 COPY . /
 
 # Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+RUN curl -sSL https://install.python-poetry.org | python -
+RUN poetry install
 
 # Make port 80 available to the world outside this container
 EXPOSE 80
