@@ -2,8 +2,7 @@ function revealElement(selector) {
     ScrollReveal().reveal(selector, {
         duration: 500,
         delay: 200,
-        origin: "bottom",
-        distance: "50px",
+        distance: "0px",
         easing: "ease-in",
         afterReveal: (el) => {
             el.style.opacity = 1;

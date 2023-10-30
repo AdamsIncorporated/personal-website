@@ -14,6 +14,30 @@
     font-style: normal;
 }
 
+@keyframes flicker {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+
+    25% {
+        opacity: 0.5;
+        transform: translate(25%, 0);
+    }
+
+    50% {
+        opacity: 0.8;
+        transform: translate(50%, 0);
+    }
+
+    75% {
+        opacity: 0.4;
+        transform: translate(75%, 0);
+    }
+}
+
 *,
 *::-moz-selection,
 *::selection,
@@ -28,22 +52,13 @@
     color: #fff;
 }
 
-table {
-    border-collapse: collapse;
-    margin-top: 0.5in;
-    width: 100%;
-}
-
-table td,
-table th {
-    margin: 10px;
-    padding: 4px;
-}
-
-table td:hover,
-table th:hover {
-    background-color: #e6e6e6;
-    color: #949494;
+.particle {
+    position: fixed;
+    width: 1px;
+    height: 1px;
+    background: #d0d0d7;
+    opacity: 0;
+    animation: flicker 1s infinite;
 }
 
 .about {
@@ -96,12 +111,9 @@ table th:hover {
 
 
 .section {
-    align-items: center;
+    align-items: top;
     color: white;
     display: flex;
-    font-size: 48px;
-    height: 100vh;
-    justify-content: center;
     opacity: 0;
     transition: opacity 0.5s;
 }
@@ -153,4 +165,91 @@ table th:hover {
     top: 20px;
     right: 20px;
     z-index: 999;
+}
+
+.main-img-container {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 50%;
+}
+
+.main-img {
+    width: 100%;
+    height: auto;
+    border: 10px solid #d0d0d7;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.main-img:hover {
+    border-color: #000000;
+    box-shadow: 5px 5px 10px #d0d0d7;
+}
+
+.main-paragraph {
+    width: 50%;
+    height: auto;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.main-header {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 5%;
+}
+
+.main-paragraph-text {
+    font-size: 1.5rem;
+}
+
+.main-balance-sheet-table-header {
+    width: 100%;
+}
+
+.main-balance-sheet-container {
+    max-height: 500px;
+    width: 100%;
+    margin: 5%;
+    overflow-y: auto;
+}
+
+.main-balance-sheet-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: inherit;
+    font-size: 0.75rem;
+}
+
+.main-balance-sheet-table th {
+    background-color: inherit;
+    color: #ffffff;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    text-align: left;
+    padding: 10px;
+}
+
+.main-balance-sheet-table tr {
+    background-color: inherit;
+    color: #ffffff;
+}
+
+.main-balance-sheet-table tr:hover {
+    color: #54aa18;
+    text-shadow: 0 0 5px rgba(84, 170, 24, 0.7);
+}
+
+.main-balance-sheet-table tr:nth-child(even) {
+    background-color: #303030;
+}
+
+.main-balance-sheet-table td {
+    padding: 1%;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+    font-size: 0.75rem;
 }

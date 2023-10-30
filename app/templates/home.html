@@ -2,11 +2,40 @@
 {% block content %}
 
 <div class="section" id="section1" style="background-color: #303030;">
-    <img src="{{ url_for('static', filename='images/index/pixel-profile-grad-pic-greyscale.png') }}" alt="" style="width: 50%; height: auto;">
-    <div>Section 1
+    <div class="main-img-container">
+        <img class="main-img" src="{{ url_for('static', filename='images/index/pixel-profile-grad-pic-greyscale.png') }}"
+            alt="">
+    </div>
+    <div class="main-paragraph">
+        <div class="main-header">
+            Financial Analyst
+        </div>
+        <div class="main-paragraph-text">
+            I am a dedicated aspiring quantitative trader with a deep passion for the creative aspects of this field.
+            My philosophy centers around the elegant simplicity of value investing, where I specialize in identifying
+            hidden
+            gems within the market and optimizing returns by capitalizing on the biases of others.
+        </div>
     </div>
 </div>
-<div class="section" id="section2" style="background-color: #202020;">Section 2</div>
+<div class="section" id="section2" style="background-color: #202020;">
+    <div id="spinner" class="spinner">
+        <div class="square" id="square1"></div>
+        <div class="square" id="square2"></div>
+        <div class="square" id="square3"></div>
+    </div>
+    <div class="main-balance-sheet-container">
+        <div id="balance-sheet"></div>
+    </div>
+    <div class="main-paragraph">
+        <div class="main-header">
+            Lets examine Target: TGT
+        </div>
+        <div class="main-paragraph-text">
+            I generally look at the balance sheet first before ever considering a buy. 
+        </div>
+    </div>
+</div>
 <div class="section" id="section3" style="background-color: #101010;">Section 3</div>
 <div class="section" id="section4" style="background-color: #080808;">Section 4</div>
 <div class="section" id="section5" style="background-color: #040404;">Section 5</div>

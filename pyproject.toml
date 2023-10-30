@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.9"
 flask = "^2.3.2"
 waitress = "^2.1.2"
+yfinance = "^0.2.31"
 
 
 [tool.poetry.group.dev.dependencies]
