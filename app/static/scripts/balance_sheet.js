@@ -45,7 +45,7 @@ function loadStockTable() {
             // Create a header element
             var header = document.createElement('h1');
             header.classList.add('main-balance-sheet-table-header');
-            header.textContent = 'Balance Sheet';
+            header.textContent = 'Balance Sheet (In Billions)';
 
             // Insert the header before the table
             tableContainer.insertBefore(header, table);

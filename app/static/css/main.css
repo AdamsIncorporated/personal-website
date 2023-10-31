@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Tickerbit';
     src: url('../fonts/Tickerbit-regular.woff2') format('woff2'),
-         url('../fonts/Tickerbit-regular.woff') format('woff');
+        url('../fonts/Tickerbit-regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -10,25 +10,30 @@
 @font-face {
     font-family: 'Tickerbit-Italic';
     src: url('../fonts/Tickerbit-italic.woff2') format('woff2'),
-         url('../fonts/Tickerbit-italic.woff') format('woff');
+        url('../fonts/Tickerbit-italic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 /* Keyframes */
 @keyframes flicker {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         transform: translate(0, 0);
     }
+
     25% {
         opacity: 0.5;
         transform: translate(25%, 0);
     }
+
     50% {
         opacity: 0.8;
         transform: translate(50%, 0);
     }
+
     75% {
         opacity: 0.4;
         transform: translate(75%, 0);
@@ -113,6 +118,7 @@
 .section {
     color: white;
     opacity: 0;
+    display: grid;
     transition: opacity 0.5s;
 }
 
@@ -218,7 +224,7 @@
 
 /* Main Balance Sheet Container */
 .main-balance-sheet-container {
-    max-height: 700px;
+    max-height: 500px;
     margin: 5%;
     max-width: 80%;
     overflow-y: auto;
@@ -257,6 +263,32 @@
 
 .main-balance-sheet-table td {
     padding: 1%;
-    border-left: 1px solid #ffffff; 
+    border-left: 1px solid #ffffff;
     border-right: 1px solid #ffffff;
+}
+
+.main-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-list li {
+    position: relative;
+    font-size: 1.5rem;
+    padding: 1%;
+    padding-left: 2.5%;
+}
+
+.main-list li::before {
+    content: '\2022';
+    position: absolute;
+    left: 0%;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.main-list span {
+    color: #54aa18;
+    text-shadow: 0 0 5px rgba(84, 170, 24, 0.7);
 }
