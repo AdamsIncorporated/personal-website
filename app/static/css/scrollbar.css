@@ -1,26 +1,18 @@
 * {
     scrollbar-width: thin;
-    /* Thin scrollbar */
     scrollbar-color: rgb(146, 146, 146) #303030;
-    /* Scrollbar thumb and track colors */
 }
 
 * {
     scrollbar-track-color: #303030;
-    /* Track background color */
 }
 
 * {
     scrollbar-face-color: #020202;
-    /* Thumb background color */
     scrollbar-shadow-color: #303030;
-    /* Thumb shadow color */
     scrollbar-highlight-color: #303030;
-    /* Thumb highlight color */
     scrollbar-3dlight-color: #303030;
-    /* Thumb 3D highlight color */
     scrollbar-darkshadow-color: #303030;
-    /* Thumb dark shadow color */
 }
 
 *::-webkit-scrollbar {
@@ -35,8 +27,6 @@
 *::-webkit-scrollbar-thumb {
     background-color: #020202;
     border-radius: 50px;
-    /* Make it more rounded */
     border: 3px solid #303030;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-    /* Add a 3D box shadow */
 }
