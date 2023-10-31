@@ -33,7 +33,7 @@ function copyCodeToClipboard(button) {
     // Set a timeout to return the border color to the original color after 1 second
     setTimeout(() => {
         container.style.borderColor = originalBorderColor;
-    }, 1000); // Change the timeout to 1000 milliseconds (1 second)
+    }, 500); // Change the timeout to 1000 milliseconds (1 second)
 
     const codeBlock = container.querySelector('pre');
     const textArea = document.createElement('textarea');

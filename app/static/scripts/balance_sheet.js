@@ -51,7 +51,7 @@ function loadStockTable() {
             tableContainer.insertBefore(header, table);
 
             // Hide the spinner once the table is loaded
-            const spinner = document.getElementById('spinner');
+            const spinner = document.getElementById('balance-sheet-loader');
             spinner.style.display = 'none';
         })
         .catch(error => {
