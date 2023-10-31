@@ -53,7 +53,7 @@
 <div class="section" id="section3" style="background-color: #101010;">
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="keyword">import</span> yfinance <span class="keyword">as</span> yf
                 <span class="keyword">import</span> pandas <span class="keyword">as</span> pd
@@ -65,7 +65,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">def</span> <span class="variable">get_daily_stock_info</span>(<span class="variable">symbol</span>):
                     <span class="comment"># Define the start and end dates for your desired one-year period</span>
@@ -81,7 +81,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="variable">stock_df</span> = <span class="function">get_daily_stock_info</span>(<span class="string">'TGT'</span>)
                 <span class="variable">stock_df</span> = <span class="variable">stock_df</span>.reset_index()
@@ -93,7 +93,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="variable">colors</span> = {
                     <span class="string">'red'</span>: <span class="string">'#ff207c'</span>,
@@ -132,7 +132,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">def</span> <span class="variable">format_borders</span>(<span class="variable">plot</span>):
                     <span class="variable">plot</span>.spines['top'].set_visible(<span class="keyword">False</span>)
@@ -145,7 +145,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">def</span> <span class="variable">format_legend</span>(<span class="variable">plot</span>):
                     <span class="variable">plot_legend</span> = <span class="variable">plot</span>.legend(loc=<span class="string">'upper left'</span>, 
@@ -158,7 +158,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">def</span> <span class="variable">plot_ma</span>(<span class="variable">plot</span>, <span class="variable">x</span>, <span class="variable">y</span>):
                     <span class="variable">mov_avg</span> = {
@@ -178,7 +178,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">def</span> <span class="variable">get_prev_day_info</span>(<span class="variable">plot</span>):
                     <span class="variable">previous_close</span> = '$' + str("{:,}".format(<span class="variable">stock_df</span>['Close'][<span class="number">0</span>])) 
@@ -195,7 +195,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">def</span> <span class="variable">get_charts</span>(<span class="variable">stock_data</span>):
                     <span class="variable">plt</span>.rc('figure', figsize=(<span class="number">15</span>, <span class="number">10</span>))
@@ -237,7 +237,7 @@
 
     <div class="container">
         <div class="jupyter-code-block">
-            <button class="copy-button" onclick="copyCodeToClipboard()">📋</button>
+            <button class="copy-button" onclick="copyCodeToClipboard(this)">📋</button>
             <pre class="python">
                 <span class="function">get_charts</span>(<span class="variable">stock_df</span>)
             </pre>

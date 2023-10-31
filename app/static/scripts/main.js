@@ -20,9 +20,8 @@ const pushbar = new Pushbar({
     overlay: true,
 });
 
-// Function to copy code to the clipboard
-function copyCodeToClipboard() {
-    const container = document.querySelector('.jupyter-code-block');
+function copyCodeToClipboard(button) {
+    const container = button.parentNode;
     const originalBorderColor = getComputedStyle(container).borderColor;
 
     // Change the border color to green
@@ -43,5 +42,9 @@ function copyCodeToClipboard() {
     textArea.select();
     document.execCommand('copy');
     document.body.removeChild(textArea);
+
+    // You can now access the button element that triggered the function
+    console.log('Button clicked:', button);
 }
+
 
