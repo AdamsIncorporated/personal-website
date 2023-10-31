@@ -1,0 +1,23 @@
+.keyword {
+    color: #0074D9; /* Blue for keywords like "if," "else," etc. */
+  }
+
+  .string {
+    color: #E6DB74; /* Yellow for strings */
+  }
+
+  .number {
+    color: #F92672; /* Red for numbers */
+  }
+
+  .comment {
+    color: #75715E; /* Gray for comments */
+  }
+
+  .function {
+    color: #00e1ff; /* Light Blue for function names */
+  }
+  
+  .variable {
+    color: #54aa18; /* Light Blue for function names */
+  }

@@ -3,32 +3,12 @@
     margin: auto;
 }
 
-pre {
-    border-left: 0.3rem solid #f2f2f2;
-}
-
-body {
-    margin: 0;
-    background: #303030;
-}
-
 .push_left {
     margin-left: 6px;
 }
 
 .push_right {
     margin-right: 6px;
-}
-
-code,
-xmp {
-    white-space: normal !important;
-}
-
-textarea {
-    margin-bottom: 0px;
-    min-height: 200px;
-    line-height: 1;
 }
 
 .close {
