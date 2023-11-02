@@ -343,7 +343,28 @@ body {
     margin: 0;
 }
 
-
 .scrolling-text {
     visibility: hidden;
+    position: relative;
+    overflow: hidden;
 }
+
+.cursor {
+    width: 8px;
+    height: 16px;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
