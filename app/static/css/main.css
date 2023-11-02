@@ -201,12 +201,6 @@
     box-shadow: 5px 5px 10px #d0d0d7;
 }
 
-/* Main Paragraph Container */
-.main-paragraph {
-    height: auto;
-    margin: 5%;
-}
-
 /* Main Header */
 .main-header {
     font-size: 2rem;
@@ -347,4 +341,9 @@
 body {
     background: #303030;
     margin: 0;
+}
+
+
+.scrolling-text {
+    visibility: hidden;
 }
