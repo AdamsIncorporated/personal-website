@@ -16,7 +16,7 @@ class Utils:
             return num
 
         # Apply the formatting function to all numerical columns
-        df = df.applymap(format_numbers)
+        df = df.map(format_numbers)
         df = df.reset_index()
         df.columns.values[0] = 'Balance Sheet Item'
         date_columns = df.columns[1:]

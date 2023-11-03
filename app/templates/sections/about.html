@@ -1,63 +1,9 @@
-<div class="container">
+<div class="container" style="height: 1000px;">
+    <div class="main-img-container">
+        <img class="main-img"
+            src="{{ url_for('static', filename='images/about/austin.png') }}" alt="">
+    </div>
     <div class="scrolling-text">
         Your scrolling text goes here...
     </div>
 </div>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let textElements = document.querySelectorAll('.scrolling-text');
-    
-        textElements.forEach(element => {
-            element.style.visibility = 'visible'; // Show the text container
-    
-            let text = element.textContent;
-            element.textContent = ''; // Clear the element's text content
-    
-            let index = 0;
-    
-            function typeCharacter() {
-                if (index < text.length) {
-                    const character = document.createElement('span');
-                    character.textContent = text.charAt(index);
-    
-                    const cursor = document.createElement('span');
-                    cursor.className = 'cursor';
-                    cursor.textContent = '_'; // Cursor character (e.g., underscore)
-    
-                    element.appendChild(character);
-                    element.appendChild(cursor);
-    
-                    index++;
-    
-                    setTimeout(deleteCharacter, 100); // Adjust the typing speed here
-                } else {
-                    // Remove the final cursor when typing is complete
-                    const finalCursor = element.querySelector('.cursor');
-                    element.removeChild(finalCursor);
-                }
-            }
-    
-            function deleteCharacter() {
-                // Remove the last character and the cursor
-                const characters = element.querySelectorAll('span:not(.cursor)');
-                if (characters.length > 0) {
-                    const lastCharacter = characters[characters.length - 1];
-                    element.removeChild(lastCharacter);
-                }
-    
-                // Move the cursor to the right
-                const cursor = element.querySelector('.cursor');
-                if (cursor) {
-                    cursor.textContent = ' '; // Replace cursor with space
-                    element.insertBefore(cursor, null); // Move it to the right
-                }
-    
-                setTimeout(typeCharacter, 100); // Adjust the typing speed here
-            }
-    
-            typeCharacter();
-        });
-    });
-    
-</script>

@@ -346,18 +346,23 @@ body {
 .scrolling-text {
     visibility: hidden;
     position: relative;
+    font-size: 1.5rem;
     overflow: hidden;
+    
+}
+
+.scrolling-text-temporary-shadow {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 .cursor {
-    width: 8px;
-    height: 16px;
-    background: white;
-    position: absolute;
-    top: 0;
-    left: 0;
+    height: 1.5rem;
+    width: 0.5rem;
+    background-color: #ffffff;
+    display: inline-block;
     animation: blink 1s infinite;
 }
+
 
 @keyframes blink {
     0%, 100% {
