@@ -16,7 +16,7 @@
 }
 
 /* Keyframes */
-@keyframes flicker {
+@keyframes particle-flicker {
 
     0%,
     100% {
@@ -40,6 +40,32 @@
     }
 }
 
+@keyframes highlight-flicker {
+    0% {
+        color: #54aa18;
+    }
+
+    50% {
+        color: #7fff4e;
+    }
+
+    100% {
+        color: #54aa18;
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
 /* Global Styles */
 *,
 *::-moz-selection,
@@ -56,7 +82,7 @@
 
 /* Elements with the .particle class */
 .particle {
-    animation: flicker 1s infinite;
+    animation: particle-flicker 1s infinite;
     background: #d0d0d7;
     height: 1px;
     opacity: 0;
@@ -66,13 +92,13 @@
 
 /* Elements with the .about class */
 .about {
-    box-shadow: 10px 0px 10px #949494;
     background-color: #ffffff;
+    box-shadow: 10px 0px 10px #949494;
+    font-size: 1.5rem;
     margin: 1in;
     opacity: 0;
     padding: 1in;
     transition: opacity 0.5s;
-    font-size: 1.5rem;
 }
 
 /* Elements with the .resume class */
@@ -181,10 +207,7 @@
 
 /* Main Image Container */
 .main-img-container {
-    margin-bottom: 5%;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-top: 5%;
+    margin: 5%;
     width: 50%;
 }
 
@@ -283,19 +306,7 @@
     position: absolute;
 }
 
-@keyframes highlight-flicker {
-    0% {
-        color: #54aa18;
-    }
 
-    50% {
-        color: #7fff4e;
-    }
-
-    100% {
-        color: #54aa18;
-    }
-}
 
 .main-list span {
     animation: highlight-flicker 2.5s infinite;
@@ -303,10 +314,10 @@
 }
 
 .container {
+    margin-bottom: 2.5%;
     margin-left: 5%;
     margin-right: 5%;
     margin-top: 2.5%;
-    margin-bottom: 2.5%;
 }
 
 .container img {
@@ -317,15 +328,15 @@
 .jupyter-code-block {
     background-color: inherit;
     border: 1px solid #ffffff;
-    position: relative;
     font-size: 1.5rem;
     padding: 1%;
+    position: relative;
 }
 
 .python span {
-    white-space: pre-wrap;
-    word-wrap: break-word; 
     page-break-after: always;
+    white-space: pre-wrap;
+    word-wrap: break-word;
 }
 
 .copy-button {
@@ -344,11 +355,11 @@ body {
 }
 
 .scrolling-text {
-    visibility: hidden;
-    position: relative;
     font-size: 1.5rem;
     overflow: hidden;
-    
+    position: relative;
+    visibility: hidden;
+
 }
 
 .scrolling-text-temporary-shadow {
@@ -356,20 +367,33 @@ body {
 }
 
 .cursor {
-    height: 1.5rem;
-    width: 0.5rem;
+    animation: blink 1s infinite;
     background-color: #ffffff;
     display: inline-block;
-    animation: blink 1s infinite;
+    height: 1.5rem;
+    width: 0.5rem;
 }
 
-
-@keyframes blink {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
+.picture-grid {
+    display: flex;
+    align-items: flex-start;
 }
 
+.large-picture {
+    flex: 1;
+    margin-right: 10%;
+    width: 70%;
+    height: auto;
+}
+
+.small-pictures {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.small-picture {
+    flex: 1;
+    width: 50%;
+}

@@ -1,9 +1,17 @@
-<div class="container" style="height: 1000px;">
-    <div class="main-img-container">
-        <img class="main-img"
-            src="{{ url_for('static', filename='images/about/austin.png') }}" alt="">
+<div class="container">
+    <div class="picture-grid">
+        <div class="large-picture">
+            <img class="main-img" src="{{ url_for('static', filename='images/about/austin.jpg') }}" alt="">
+        </div>
+        <div class="small-pictures">
+            <div class="small-picture">
+                <img class="main-img" src="{{ url_for('static', filename='images/about/srv.png') }}" alt="">
+            </div>
+        </div>
     </div>
+</div>
+<div class="container">
     <div class="scrolling-text">
-        Your scrolling text goes here...
+        I was born and raised in Austin, Texas!
     </div>
 </div>
