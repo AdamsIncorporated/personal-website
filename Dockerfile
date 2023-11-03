@@ -20,4 +20,4 @@ RUN poetry install
 EXPOSE 5000
 
 # Activate the Poetry virtual environment and run your command
-CMD ["/bin/sh", "-c", "poetry shell && waitress-serve --listen=*:5000 __init__:app"]
+CMD ["poetry", "run", "waitress-serve", "--listen=*:5000", "__init__:app"]
