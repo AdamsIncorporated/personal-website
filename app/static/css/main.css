@@ -205,15 +205,14 @@
     z-index: 999;
 }
 
-/* Main Image Container */
 .main-img-container {
-    margin: 5%;
     width: 50%;
 }
 
 /* Main Images */
 .main-img {
     border: 10px solid #d0d0d7;
+    width: 50%;
     height: auto;
     transition: border-color 0.3s, box-shadow 0.3s;
     width: 100%;
@@ -224,11 +223,18 @@
     box-shadow: 5px 5px 10px #d0d0d7;
 }
 
+/* Main Title */
+.main-title {
+    font-size: 10rem;
+    font-weight: 600;
+    margin: 5% 0;
+}
+
 /* Main Header */
 .main-header {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
-    margin-bottom: 5%;
+    margin: 5% 0;
 }
 
 /* Main Paragraph Text */
@@ -357,7 +363,6 @@ body {
     overflow: hidden;
     position: relative;
     visibility: hidden;
-
 }
 
 .scrolling-text-temporary-shadow {
@@ -376,6 +381,7 @@ body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
+    margin: 0;
 }
 
 .gallery img {
