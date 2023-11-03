@@ -7,11 +7,17 @@ WORKDIR /app
 # Copy the current directory contents into the container at /app
 COPY . /app
 
-# Install any needed packages specified in requirements.txt
-RUN pip install -r requirements.txt
+# Install Poetry
+RUN pip install poetry
 
-# # Make port 5000 available to the world outside this container
+# Copy pyproject.toml and poetry.lock to the container
+COPY pyproject.toml poetry.lock /app/
+
+# Install project dependencies using Poetry
+RUN poetry install
+
+# Make port 5000 available to the world outside this container
 EXPOSE 5000
 
-# Run app.py when the container launches
-CMD ["waitress-serve", "--listen=*:5000", "__init__:app"]
+# Activate the Poetry virtual environment and run your command
+CMD ["/bin/sh", "-c", "poetry shell && waitress-serve --listen=*:5000 __init__:app"]
