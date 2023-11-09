@@ -2,6 +2,7 @@ function Loader() {
     this.init = function () {
         this.revealElements();
         this.initPushbar();
+        this.displayFlashes();
     };
 
     this.revealElement = function (selector) {
@@ -54,6 +55,17 @@ function Loader() {
 
         // You can now access the button element that triggered the function
         console.log('Button clicked:', button);
+    };
+
+    this.displayFlashes = function () {
+        var flahes = document.querySelector('.flashes');
+
+        if (flahes) {
+            flahes.classList.add('show');
+            setTimeout(function () {
+                flahes.classList.remove('show');
+            }, 5000);
+        };
     };
 }
 

@@ -1,0 +1,29 @@
+<div id="form-section" class="container" style="display: flex; flex-direction: row;">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+    <div style="width: 30%;">
+        <img src="{{ url_for('static', filename='images/contact/paper-airplane.gif') }}" alt="">
+    </div>
+    <div style="width: 50%; height: 500px;">
+        <div class="main-header">Contact Me</div>
+        <form class="email-form" action="/email" method="post">
+            <label for="first-name">First Name:</label>
+            <input type="text" id="first-name" name="first-name" required><br><br>
+
+            <label for="last-name">Last Name:</label>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+
+            <button class="button-54" type="submit" value="Submit">
+        </form>
+    </div>
+</div>
