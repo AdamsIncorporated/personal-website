@@ -1,15 +1,20 @@
 :root {
+    /* Colors */
     --black: #000000;
     --computer-green: #54aa18;
-    --header: 5rem;
     --light-computer-green: #7fff4e;
     --light-grey: #d0d0d7;
+    --white: #ffffff;
+
+    /* Fonts */
+    --header: 5rem;
     --paragraph: 3rem;
     --table-text: 0.75rem;
     --title: 10rem;
-    --white: #ffffff;
-    /* Colors */
-    /* Font Sizes */
+
+    /* Cursors */
+    --default-cursor: url("/static/images/cursors/arrow.cur"), default;
+    --pointer-cursor: url("/static/images/cursors/link.cur"), pointer;
 }
 
 /* Fonts */
@@ -85,13 +90,18 @@
 *::-moz-selection,
 *::selection,
 *::-webkit-selection {
-    cursor: url("/static/images/cursors/arrow.cur"), default;
+    cursor: var(--default-cursor);
     font-family: 'Tickerbit', sans-serif;
 }
 
-*::selection {
-    background-color: var(--black);
+::selection {
     color: var(--white);
+    background-color: var(--black);
+}
+
+body {
+    background: #303030;
+    margin: 0;
 }
 
 /* Elements with the .particle class */
@@ -187,6 +197,7 @@
     margin-right: 30px;
     transition: .5s ease;
     width: 60px;
+    cursor: var(--pointer-cursor);
 }
 
 .shadow img:hover {
@@ -230,8 +241,8 @@
 }
 
 .resume-button-container a {
-    color: red;
     background-color: var(--white);
+    color: red;
 }
 
 .main-img-container {
@@ -377,11 +388,6 @@
     top: 1%;
 }
 
-body {
-    background: #303030;
-    margin: 0;
-}
-
 .scrolling-text {
     font-size: var(--paragraph);
     overflow: hidden;
@@ -398,7 +404,7 @@ body {
     background-color: var(--white);
     display: inline-block;
     height: var(--paragraph);
-    margin-left: 2.5%;
+    margin-left: 1%;
     width: 1rem;
 }
 

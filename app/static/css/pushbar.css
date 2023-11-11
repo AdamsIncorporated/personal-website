@@ -12,23 +12,23 @@
 }
 
 .close {
-    width: 20px;
-    height: 21px;
+    width: var(--paragraph);
+    height: var(--paragraph);
     position: relative;
     display: inline-block;
     vertical-align: text-bottom;
     text-align: center;
-    cursor: pointer;
+    cursor: var(--pointer-cursor);
 }
 
 .close:before,
 .close:after {
     position: absolute;
     left: 10px;
-    content: ' ';
+    content: '';
     height: 21px;
     width: 3px;
-    background-color: #f2f2f2;
+    background-color: var(--white);
 }
 
 .close:before {
@@ -42,15 +42,15 @@
 .card {
     margin: 20px;
     border-radius: 5px;
-    background: #f2f2f2;
+    background: var(--white);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1)
 }
 
 .card_title,
 .title,
 [data-pushbar-id] {
-    background: #000000;
-    color: #f2f2f2;
+    background: var(--black);
+    color: var(--white);
 }
 
 .card_title,
@@ -69,9 +69,43 @@
 
 a.button.getBtn {
     margin-top: 16px;
-    background-color: #f2f2f2;
-    color: #000000;
-    border-color: #f2f2f2;
+    background-color: var(--white);
+    color: var(--black);
+    border-color: var(--white);
+}
+
+.menu a {
+    width: fit-content;
+    color: var(--black);
+    cursor: var(--pointer-cursor);
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+    text-decoration: none;
+}
+
+.menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: var(--black);
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    overflow: hidden;
+}
+
+a:hover::after,
+a:focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.2em, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.menu a:visited {
+    color: var(--black);
 }
 
 .small {
@@ -86,9 +120,5 @@ a.button.getBtn {
     font-size: 50px;
     display: block;
     margin: 0px;
-    color: #000000;
-}
-
-aside ul.menu li a:visited {
-    text-decoration: none !important;
+    color: var(--black);
 }
