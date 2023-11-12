@@ -1,16 +1,22 @@
-<div class="container">
-    <div class="main-title">Sam Adams</div>
-    <div class="main-img-container">
-        <img class="main-img"
-            src="{{ url_for('static', filename='images/index/pixel-profile-grad-pic.png') }}" alt="">
-    </div>    
-    <div class="main-header">
-        Financial Analyst 🧮
-    </div>
-    <div class="main-paragraph-text scrolling-text">
-        I am a dedicated aspiring quantitative trader with a deep passion for the creative aspects of this field.
-        My philosophy centers around the elegant simplicity of value investing, where I specialize in identifying
-        hidden
-        gems within the market and optimizing returns by capitalizing on the biases of others.
+<div class="container" style="display: flex; flex-direction: column;">
+    <div class="main-title" style="margin: 0.5% 0;">Sam Adams</div>
+    <div class="main-header" style="margin: 0.5% 0;">Financial Engineer 🧮</div>
+    <div style="display: flex; flex-direction: row;">
+        <div class="pixel-container">
+            <img
+                class="pixel-image"
+                src="{{ url_for('static', filename='images/intro/profile-pixel.jpg') }}">
+            <div class="pixel-overlay">
+                <img
+                    src="{{ url_for('static', filename='images/intro/profile.jpg') }}">
+            </div>
+        </div>
+        <div style="margin: 0 2.5%;">
+            <div class="main-paragraph-text scrolling-text">
+                I am a devoted aspiring quant with a fervor for uncovering deep
+                value and seizing alpha. "An investment in
+                knowledge pays the best interest." - Ben Franklin
+            </div>
+        </div>
     </div>
 </div>

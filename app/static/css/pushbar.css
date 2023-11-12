@@ -3,28 +3,21 @@
 }
 
 .close {
-    width: var(--paragraph);
-    height: var(--paragraph);
+    font-size: calc(var(--paragraph) * .75);
     position: relative;
     display: inline-block;
+    left: 0;
+    top: 0;
     cursor: var(--pointer-cursor);
-    margin: 1% 3%;
+    margin: 20px 40px;
+    color: var(--white);
+    border: 5px solid var(--white);
+    padding: 0.2em 0.5em;
 }
 
-.close:before,
-.close:after {
-    position: absolute;
-    content: '';
-    height: var(--paragraph);
-    width: 5px;
-    background-color: var(--white);
-}
-
-a.button.getBtn {
-    margin-top: 16px;
-    background-color: var(--white);
-    color: var(--black);
-    border-color: var(--white);
+.close:hover {
+    color: var(--light-grey);
+    border: 5px solid var(--light-grey);
 }
 
 .menu a {
@@ -64,7 +57,7 @@ a:focus::after {
 
 .menu li {
     list-style: none;
-    padding: 1% 3%;
+    margin: 0.5% 0%;
     display: block;
     color: var(--black);
 }

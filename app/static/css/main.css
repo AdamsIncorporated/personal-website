@@ -4,6 +4,7 @@
     --computer-green: #54aa18;
     --light-computer-green: #7fff4e;
     --light-grey: #d0d0d7;
+    --grey: #d0d0d738;
     --white: #ffffff;
 
     /* Fonts */
@@ -15,6 +16,7 @@
     /* Cursors */
     --default-cursor: url("/static/images/cursors/arrow.cur"), default;
     --pointer-cursor: url("/static/images/cursors/link.cur"), pointer;
+    --pointer-text: url("/static/images/cursors/text.cur"), text;
 }
 
 /* Fonts */
@@ -245,29 +247,21 @@ body {
     color: red;
 }
 
-.main-img-container {
-    width: 50%;
-}
-
-/* Main Images */
-.main-img {
-    border: 10px solid var(--light-grey);
-    height: auto;
-    transition: border-color 0.3s, box-shadow 0.3s;
-    width: 100%;
-    width: 50%;
-}
-
-.main-img:hover {
-    border-color: var(--black);
-    box-shadow: 5px 5px 10px var(--light-grey);
-}
-
 /* Main Title */
 .main-title {
     font-size: var(--title);
     font-weight: 600;
     margin: 5% 0;
+    text-shadow: 1px 1px 1px var(--grey),
+        1px 2px 1px var(--grey),
+        1px 3px 1px var(--grey),
+        1px 4px 1px var(--grey),
+        1px 5px 1px var(--grey),
+        1px 6px 1px var(--grey),
+        1px 7px 1px var(--grey),
+        1px 8px 1px var(--grey),
+        1px 9px 1px var(--grey),
+        1px 10px 1px var(--grey);
 }
 
 /* Main Header */
@@ -408,23 +402,6 @@ body {
     width: 1rem;
 }
 
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 0 20px;
-}
-
-/* Create two equal columns that sits next to each other */
-.column {
-    flex: 50%;
-    padding: 0 20px;
-}
-
-.column img {
-    margin-top: 20px;
-    vertical-align: top;
-}
-
 .email-form div {
     align-items: center;
     display: flex;
@@ -459,6 +436,7 @@ textarea {
     padding: 5px;
     resize: none;
     transition: background-color 0.3s, border-color 0.3s, color 0.3s;
+    cursor: var(--pointer-text);
 }
 
 .email-form input:hover,
@@ -474,12 +452,12 @@ textarea:focus {
 }
 
 .email-form button {
-    height: 50px;
-    width: 10%;
+    height: fit-content;
+    width: fit-content;
 }
 
 .email-form h1 {
-    font-size: var(--paragraph);
+    font-size: var(--header);
 }
 
 .flashes {
@@ -496,4 +474,45 @@ textarea:focus {
 
 .flashes.show {
     display: block;
+}
+
+.pixel-container {
+    position: relative;
+    width: 50%;
+    height: auto;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.pixel-container img {
+    border: 10px solid var(--white);
+    box-sizing: border-box;
+}
+
+.pixel-image {
+    width: 100%;
+    height: 100%;
+    transition: opacity 2s ease;
+    image-rendering: pixelated;
+}
+
+.pixel-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.pixel-container:hover .pixel-image {
+    opacity: 0;
+}
+
+.pixel-container:hover .pixel-overlay {
+    opacity: 1;
 }

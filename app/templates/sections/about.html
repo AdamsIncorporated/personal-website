@@ -1,23 +1,30 @@
-<div class="row">
-    <div class="column">
-        <img
-            src="{{ url_for('static', filename='images/about/austin-postcard.png') }}"
-            alt>
-        <img src="{{ url_for('static', filename='images/about/srv.png') }}"
-            alt>
-    </div>
-</div>
-<div class="row">
-    <div class="column">
-        <img
-            src="{{ url_for('static', filename='images/about/austin.jpg') }}"
-            alt>
-        <img
-            src="{{ url_for('static', filename='images/about/austin.jpg') }}"
-            alt>
-    </div>
-</div>
 <div class="container">
+    <div class="pixel-container">
+        <img
+            class="pixel-image"
+            src="{{ url_for('static', filename='images/about/srv-pixel.jpg') }}">
+        <div class="pixel-overlay">
+            <img src="{{ url_for('static', filename='images/about/srv.jpg') }}">
+        </div>
+    </div>
+    <div class="pixel-container">
+        <img
+            class="pixel-image"
+            src="{{ url_for('static', filename='images/about/austin-pixel.jpg') }}">
+        <div class="pixel-overlay">
+            <img
+                src="{{ url_for('static', filename='images/about/austin.jpg') }}">
+        </div>
+    </div>
+    <div class="pixel-container">
+        <img
+            class="pixel-image"
+            src="{{ url_for('static', filename='images/about/austin-postcard-pixel.jpg') }}">
+        <div class="pixel-overlay">
+            <img
+                src="{{ url_for('static', filename='images/about/austin-postcard.jpg') }}">
+        </div>
+    </div>
     <div class="main-header">
         My Roots 🌱
     </div>
@@ -28,6 +35,14 @@
         hill country I call home!
     </div>
     <div class="main-divider"></div>
+    <div class="main-header">
+        My Core Values ©️
+    </div>
+    <div class="scrolling-text">
+        I hold honesty, unwavering work ethic, and a tenacious, resourceful
+        spirit as my core character values. Any
+        problem is solvable and all topics of learning are to be explored.
+    </div>
     <div class="main-header">
         My Obsession with Computers 🖥️
     </div>
@@ -49,13 +64,5 @@
         solutions for your company, even those you might not have realized
         you
         needed.
-    </div>
-    <div class="main-header">
-        My Core Values ©️
-    </div>
-    <div class="scrolling-text">
-        I hold honesty, unwavering work ethic, and a tenacious, resourceful
-        spirit as my core character values. Any
-        problem is solvable and all topics of learning are to be explored.
     </div>
 </div>
