@@ -490,17 +490,16 @@ textarea:focus {
     width: 50%;
     height: auto;
     overflow: hidden;
-    flex-shrink: 0;
 }
 
 .pixel-container img {
     border: 10px solid var(--white);
     box-sizing: border-box;
+    width: 100%;
+    height: auto;
 }
 
 .pixel-image {
-    width: 100%;
-    height: auto;
     transition: opacity 2s ease;
     image-rendering: pixelated;
 }
