@@ -1,13 +1,5 @@
 <div id="form-section" class="container" style="display: flex; flex-direction: column;">
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-    <ul class="flashes">
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-    </ul>
-    {% endif %}
-    {% endwith %}
+    
     <div style="width: 20%;">
         <img src="{{ url_for('static', filename='images/contact/paper-airplane.gif') }}" alt="">
     </div>

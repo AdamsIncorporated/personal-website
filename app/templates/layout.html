@@ -32,6 +32,16 @@
 
     <div class="button-container"><button class="button-54" data-pushbar-target="top">Links</button></div>
 
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <ul class="flashes">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% endwith %}
+
     <main class="pushbar_main_content particle-container">
         {% block content %}
         {% endblock %}

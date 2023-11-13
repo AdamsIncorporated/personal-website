@@ -136,7 +136,6 @@ function Loader() {
             }
         }
 
-
         // Attach the handleMouseover function to each pixelImage
         pixelImages.forEach(pixelImage => {
             pixelImage.addEventListener('mouseover', handleMouseover);
