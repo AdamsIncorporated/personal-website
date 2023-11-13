@@ -1,4 +1,5 @@
 :root {
+
     /* Colors */
     --black: #000000;
     --computer-green: #54aa18;
@@ -20,7 +21,6 @@
     --pointer-text: url("/static/images/cursors/text.cur"), text;
 }
 
-/* Fonts */
 @font-face {
     font-family: 'Tickerbit';
     src: url('../fonts/Tickerbit-regular.woff2') format('woff2'),
@@ -37,7 +37,6 @@
     font-style: normal;
 }
 
-/* Keyframes */
 @keyframes particle-flicker {
 
     0%,
@@ -88,7 +87,6 @@
     }
 }
 
-/* Global Styles */
 *,
 *::-moz-selection,
 *::selection,
@@ -107,7 +105,6 @@ body {
     margin: 0;
 }
 
-/* Elements with the .particle class */
 .particle {
     animation: particle-flicker 1s infinite;
     background: var(--light-grey);
@@ -117,7 +114,6 @@ body {
     width: 1px;
 }
 
-/* Elements with the .about class */
 .about {
     background-color: var(--white);
     box-shadow: 10px 0px 10px var(--grey);
@@ -128,7 +124,6 @@ body {
     transition: opacity 0.5s;
 }
 
-/* Elements with the .resume class */
 .resume {
     background-color: var(--white);
     box-shadow: 10px 0px 10px #949494;
@@ -177,7 +172,6 @@ body {
     font-weight: 500;
 }
 
-/* Elements with the .section class */
 .section {
     color: white;
     display: flex;
@@ -187,14 +181,12 @@ body {
     width: 100%;
 }
 
-/* Social Media Icons */
 .social-media-icons {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
-/* Images with the .shadow class */
 .shadow img {
     cursor: var(--pointer-cursor);
     margin-bottom: 10px;
@@ -210,7 +202,6 @@ body {
     transition: .5s ease;
 }
 
-/* Elements with the .date-row class */
 .resume-date-row {
     display: flex;
     font-size: calc(var(--paragraph) * 0.5);
@@ -221,7 +212,6 @@ body {
     font-family: 'Tickerbit-Italic', sans-serif;
 }
 
-/* Elements with the .language-logos class */
 .language-logos {
     display: flex;
     justify-content: start;
@@ -235,7 +225,6 @@ body {
     max-width: 50%;
 }
 
-/* Resume Button Container */
 .resume-button-container {
     position: fixed;
     right: 20px;
@@ -248,49 +237,33 @@ body {
     color: red;
 }
 
-/* Main Title */
 .main-title {
     font-size: var(--title);
     font-weight: 600;
     margin: 5% 0;
-    text-shadow:
-        1px 1px 1px var(--grey),
-        1px 2px 1px var(--grey),
-        1px 3px 1px var(--grey),
-        1px 4px 1px var(--grey),
-        1px 5px 1px var(--grey),
-        1px 6px 1px var(--grey),
-        1px 7px 1px var(--grey),
-        1px 8px 1px var(--grey),
-        1px 9px 1px var(--grey),
-        1px 10px 1px var(--grey);
+    text-shadow:        1px 1px 1px var(--grey),        1px 2px 1px var(--grey),        1px 3px 1px var(--grey),        1px 4px 1px var(--grey),        1px 5px 1px var(--grey),        1px 6px 1px var(--grey),        1px 7px 1px var(--grey),        1px 8px 1px var(--grey),        1px 9px 1px var(--grey),        1px 10px 1px var(--grey);
 }
 
-/* Main Header */
 .main-header {
     font-size: var(--header);
     font-weight: 600;
     margin: 5% 0;
 }
 
-/* Main Paragraph Text */
 .main-paragraph-text {
     font-size: var(--paragraph);
 }
 
-/* Main Balance Sheet Table Header */
 .main-balance-sheet-table-header {
     width: 100%;
 }
 
-/* Main Balance Sheet Container */
 .main-balance-sheet-container {
     margin: 0 5%;
     max-height: 500px;
     overflow-y: auto;
 }
 
-/* Main Balance Sheet Table */
 .main-balance-sheet-table {
     background-color: inherit;
     border-collapse: collapse;
@@ -498,19 +471,21 @@ textarea:focus {
     border: 10px solid var(--white);
     box-sizing: border-box;
     height: auto;
-    width: 95%;
     margin: 2.5% 2.5%;
+    width: 95%;
 }
 
 .pixel-content {
     position: relative;
+    width:  70%;
 }
 
 .pixel-caption {
-    visibility: hidden;
-    margin: 2.5% 2.5%;
     align-items: center;
     font-size: var(--caption-text);
+    margin: 2.5% 2.5%;
+    visibility: hidden;
+    width: 30%;
 }
 
 .pixel-image {
