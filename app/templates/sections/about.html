@@ -1,28 +1,35 @@
 <div class="pixel-gallery">
     <div class="pixel-container">
-        <img
-            class="pixel-image"
-            src="{{ url_for('static', filename='images/about/srv-pixel.jpg') }}">
-        <div class="pixel-overlay">
-            <img src="{{ url_for('static', filename='images/about/srv.jpg') }}">
+        <div class="pixel-content">
+            <img class="pixel-image" src="{{ url_for('static', filename='images/about/srv-pixel.jpg') }}">
+            <div class="pixel-overlay">
+                <img src="{{ url_for('static', filename='images/about/srv.jpg') }}">
+            </div>
+        </div>
+        <div class="pixel-caption">
+            <div>If you know you know</div>
         </div>
     </div>
     <div class="pixel-container">
-        <img
-            class="pixel-image"
-            src="{{ url_for('static', filename='images/about/austin-pixel.jpg') }}">
-        <div class="pixel-overlay">
-            <img
-                src="{{ url_for('static', filename='images/about/austin.jpg') }}">
+        <div class="pixel-caption">
+            test
+        </div>
+        <div class="pixel-content">
+            <img class="pixel-image" src="{{ url_for('static', filename='images/about/austin-pixel.jpg') }}">
+            <div class="pixel-overlay">
+                <img src="{{ url_for('static', filename='images/about/austin.jpg') }}">
+            </div>
         </div>
     </div>
     <div class="pixel-container">
-        <img
-            class="pixel-image"
-            src="{{ url_for('static', filename='images/about/austin-postcard-pixel.jpg') }}">
-        <div class="pixel-overlay">
-            <img
-                src="{{ url_for('static', filename='images/about/austin-postcard.jpg') }}">
+        <div class="pixel-content">
+            <img class="pixel-image" src="{{ url_for('static', filename='images/about/austin-postcard-pixel.jpg') }}">
+            <div class="pixel-overlay">
+                <img src="{{ url_for('static', filename='images/about/austin-postcard.jpg') }}">
+            </div>
+        </div>
+        <div class="pixel-caption">
+            test
         </div>
     </div>
 </div>
@@ -50,9 +57,7 @@
         My Obsession with Computers 🖥️
     </div>
     <div style="width: 500px;">
-        <img class="shadow"
-            src="{{ url_for('static', filename='images/about/computer.gif') }}"
-            alt>
+        <img class="shadow" src="{{ url_for('static', filename='images/about/computer.gif') }}" alt>
     </div>
     <div class="scrolling-text">
         Isn't it truly remarkable how computers can tackle immensely

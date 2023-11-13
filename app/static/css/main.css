@@ -10,7 +10,8 @@
     /* Fonts */
     --header: 5rem;
     --paragraph: 3rem;
-    --table-text: 0.75rem;
+    --caption-text: 3rem;
+    --table-text: 1rem;
     --title: 10rem;
 
     /* Cursors */
@@ -252,7 +253,17 @@ body {
     font-size: var(--title);
     font-weight: 600;
     margin: 5% 0;
-    text-shadow: 1px 1px 1px var(--grey),        1px 2px 1px var(--grey),        1px 3px 1px var(--grey),        1px 4px 1px var(--grey),        1px 5px 1px var(--grey),        1px 6px 1px var(--grey),        1px 7px 1px var(--grey),        1px 8px 1px var(--grey),        1px 9px 1px var(--grey),        1px 10px 1px var(--grey);
+    text-shadow:
+        1px 1px 1px var(--grey),
+        1px 2px 1px var(--grey),
+        1px 3px 1px var(--grey),
+        1px 4px 1px var(--grey),
+        1px 5px 1px var(--grey),
+        1px 6px 1px var(--grey),
+        1px 7px 1px var(--grey),
+        1px 8px 1px var(--grey),
+        1px 9px 1px var(--grey),
+        1px 10px 1px var(--grey);
 }
 
 /* Main Header */
@@ -470,10 +481,6 @@ textarea:focus {
     margin: 2.5% 5%;
 }
 
-.pixel-gallery .pixel-container:nth-child(even) {
-    left: 50%;
-}
- 
 .pixel-container {
     height: auto;
     overflow: hidden;
@@ -481,16 +488,42 @@ textarea:focus {
     width: 50%;
 }
 
+.pixel-gallery .pixel-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
 .pixel-container img {
     border: 10px solid var(--white);
     box-sizing: border-box;
     height: auto;
-    width: 100%;
+    width: 95%;
+    margin: 2.5% 2.5%;
+}
+
+.pixel-content {
+    position: relative;
+}
+
+.pixel-caption {
+    visibility: hidden;
+    margin: 2.5% 2.5%;
+    align-items: center;
+    font-size: var(--caption-text);
 }
 
 .pixel-image {
-    image-rendering: pixelated;
+    align-items: center;
+    display: flex;
+    height: auto;
+    justify-content: center;
+    left: 0;
+    opacity: 1;
+    position: relative;
+    top: 0;
     transition: opacity 2s ease;
+    width: 100%;
 }
 
 .pixel-overlay {
