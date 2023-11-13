@@ -44,9 +44,13 @@ def form():
     if request.method == 'POST':
         first_name = request.form.get("first-name")
         last_name = request.form.get("last-name")
-        msg = request.form.get("message")
+        msg = f"""
+            {first_name}
+            {last_name}
+            {request.form.get("message")}
+        """
         email = "samuel.grant.adams@gmail.com"
-        subject = "Hellow World!"
+        subject = "From you wesbite: Hello World!"
 
         em = EmailMessage()
         em['From'] = email
