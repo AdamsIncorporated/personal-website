@@ -102,15 +102,23 @@ function Loader() {
     }
 
     this.displayFlashes = function () {
-        var flahes = document.querySelector('.flashes');
-
-        if (flahes) {
-            flahes.classList.add('show');
+        var flashes = document.querySelector('.flashes');
+    
+        if (flashes) {
+            flashes.style.opacity = 1;
+            flashes.style.display = 'block';
+    
             setTimeout(function () {
-                flahes.classList.remove('show');
+                flashes.style.opacity = 0;
+            }, 3000);
+    
+            setTimeout(function () {
+                flashes.style.display = 'none';
             }, 5000);
-        };
+        }
     };
+    
+    
 
     this.displayPixelImageCaptions = function () {
         // Get all elements with the class 'pixel-overlay'
