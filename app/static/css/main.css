@@ -172,6 +172,11 @@ body {
     font-weight: 500;
 }
 
+.resume-table {
+    width: 100%;
+    font-size: calc(var(--paragraph) * .5);
+}
+
 .section {
     color: white;
     display: flex;
