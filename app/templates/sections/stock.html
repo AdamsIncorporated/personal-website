@@ -33,6 +33,14 @@
         </li>
     </ul>
 </div>
+
+<div class="container">
+    <div class="main-header">Lets Plot the Stock 📈</div>
+    <div class="main-paragraph-text">
+        Using Jupyter kernel and python's yfinance, pandas, and matplotlib.
+    </div>
+</div>
+
 <div class="container">
     <div class="jupyter-code-block">
         <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">📋</button>
@@ -58,6 +66,12 @@
                 <span class="variable">target_data</span> = yf.download(<span class="variable">symbol</span>, start=<span class="variable">start_date</span>, end=<span class="variable">end_date</span>)
                 <span class="keyword">return</span> <span class="variable">target_data</span>
         </pre>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main-paragraph-text">
+        Collect the data 📊 ...
     </div>
 </div>
 
@@ -109,6 +123,12 @@
             }
             <span class="variable">plt.style.use</span>(<span class="variable">dark_theme</span>)
         </pre>
+    </div>
+</div>
+
+<div class="container">
+    <div class="main-paragraph-text">
+        Establish theming 🎨 ...
     </div>
 </div>
 
@@ -226,6 +246,9 @@
     </div>
 </div>
 
+<div class="container">
+    <div class="main-paragraph-text">It appears the stock is mean reverting towards a cheaper value 📉 ...</div>
+</div>
 <div class="container">
     <img src="{{ url_for('static', filename='images/stock-charts/target_stock_chart.svg') }}" alt="">
 </div>
