@@ -1,0 +1,298 @@
+<div class="section">
+  <div class="container">
+    <div class="main-header">My take on Target 🎯</div>
+  </div>
+  <div id="balance-sheet-loader" class="loader">
+    <span class="loader__element"></span>
+    <span class="loader__element"></span>
+    <span class="loader__element"></span>
+  </div>
+  <div class="main-balance-sheet-container">
+    <div id="balance-sheet"></div>
+  </div>
+  <div class="container">
+    <div class="main-header">Quick Overview of TGT</div>
+    <div class="main-paragraph-text">Key Insights</div>
+    <ul class="main-list">
+      <li>
+        Current Total Assets of <span>$53.34</span> which is steadily increasing
+        year to year
+      </li>
+      <li>
+        The current working capital stands at a deficit of <span>$1.65</span>,
+        indicating operational challenges that have been shared by several
+        companies within the peer group.
+      </li>
+      <li>
+        The value of "Buildings and Improvements" currently stands at
+        <span>$34.75</span>, reflecting their expansion of square footage in
+        their stores, demonstrating notable growth.
+      </li>
+      <li>
+        The current Debt-to-Equity (D/E) ratio stands at approximately
+        <span>1.67</span>, suggesting a relatively modest level of leverage that
+        aligns with industry peers and remains comfortably below the threshold
+        of 2.
+      </li>
+      <li>
+        The Accounts Receivable Turnover for the specified period stands at an
+        impressive <span>64.38</span>, consistently surpassing the commendable
+        benchmark of 60, demonstrating a strong financial performance.
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <div class="main-header">Lets Plot the Stock 📈</div>
+    <div class="main-paragraph-text">
+      Using Jupyter kernel and python's yfinance, pandas, and matplotlib.
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="keyword">import</span> yfinance <span class="keyword">as</span> yf
+                    <span class="keyword">import</span> pandas <span class="keyword">as</span> pd
+                    <span class="keyword">import</span> datetime
+                    <span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">def</span> <span class="variable">get_daily_stock_info</span>(<span class="variable">symbol</span>):
+                        <span class="comment"># Define the start and end dates for your desired one-year period</span>
+                        <span class="variable">end_date</span> = datetime.datetime.now().date()
+                        <span class="variable">start_date</span> = <span class="variable">end_date</span> - datetime.timedelta(days=<span class="number">365</span>)
+        
+                        <span class="comment"># Fetch the historical data</span>
+                        <span class="variable">target_data</span> = yf.download(<span class="variable">symbol</span>, start=<span class="variable">start_date</span>, end=<span class="variable">end_date</span>)
+                        <span class="keyword">return</span> <span class="variable">target_data</span>
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-paragraph-text">Collect the data 📊 ...</div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="variable">stock_df</span> = <span class="function">get_daily_stock_info</span>(<span class="string">'TGT'</span>)
+                    <span class="variable">stock_df</span> = <span class="variable">stock_df</span>.reset_index()
+                    <span class="variable">stock_df</span>.columns.values[<span class="number">0</span>] = <span class="string">'Date'</span>
+                    <span class="variable">stock_df</span>.head()
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="variable">colors</span> = {
+                        <span class="string">'red'</span>: <span class="string">'#ff207c'</span>,
+                        <span class="string">'grey'</span>: <span class="string">'#d0d0d7'</span>,
+                        <span class="string">'blue'</span>: <span class="string">'#207cff'</span>,
+                        <span class="string">'orange'</span>: <span class="string">'#ffa320'</span>,
+                        <span class="string">'green'</span>: <span class="string">'#00ec8b'</span>
+                    }
+                    <span class="variable">config_ticks</span> = {
+                        <span class="string">'size'</span>: <span class="number">14</span>,
+                        <span class="string">'color'</span>: <span class="variable">colors</span>[<span class="string">'grey'</span>],
+                        <span class="string">'labelcolor'</span>: <span class="variable">colors</span>[<span class="string">'grey'</span>]
+                    }
+                    <span class="variable">config_title</span> = {
+                        <span class="string">'size'</span>: <span class="number">18</span>,
+                        <span class="string">'color'</span>: <span class="variable">colors</span>[<span class="string">'grey'</span>],
+                        <span class="string">'ha'</span>: <span class="string">'left'</span>,
+                        <span class="string">'va'</span>: <span class="string">'baseline'</span>
+                    }
+                    <span class="variable">dark_theme</span> = {
+                        <span class="string">'font.family'</span>: <span class="string">'Consolas'</span>,
+                        <span class="string">'axes.facecolor'</span>: <span class="string">'black'</span>,
+                        <span class="string">'axes.edgecolor'</span>: <span class="string">'gray'</span>,
+                        <span class="string">'axes.labelcolor'</span>: <span class="string">'white'</span>,
+                        <span class="string">'text.color'</span>: <span class="string">'white'</span>,
+                        <span class="string">'xtick.color'</span>: <span class="string">'white'</span>,
+                        <span class="string">'ytick.color'</span>: <span class="string">'white'</span>,
+                        <span class="string">'grid.color'</span>: <span class="string">'gray'</span>,
+                        <span class="string">'figure.facecolor'</span>: <span class="string">'black'</span>,
+                        <span class="string">'legend.edgecolor'</span>: <span class="string">'gray'</span>,
+                    }
+                    <span class="variable">plt.style.use</span>(<span class="variable">dark_theme</span>)
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-paragraph-text">Establish theming 🎨 ...</div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">def</span> <span class="variable">format_borders</span>(<span class="variable">plot</span>):
+                        <span class="variable">plot</span>.spines['top'].set_visible(<span class="keyword">False</span>)
+                        <span class="variable">plot</span>.spines['left'].set_visible(<span class="keyword">False</span>)
+                        <span class="variable">plot</span>.spines['left'].set_color(<span class="variable">colors</span>[<span class="string">'grey'</span>])
+                        <span class="variable">plot</span>.spines['bottom'].set_color(<span class="variable">colors</span>[<span class="string">'grey'</span>])
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">def</span> <span class="variable">format_legend</span>(<span class="variable">plot</span>):
+                        <span class="variable">plot_legend</span> = <span class="variable">plot</span>.legend(loc=<span class="string">'upper left'</span>, 
+                        bbox_to_anchor=(-0.005, 0.95), fontsize=<span class="number">16</span>)    
+                        <span class="keyword">for</span> <span class="variable">text</span> <span class="keyword">in</span> <span class="variable">plot_legend</span>.get_texts():
+                            <span class="variable">text</span>.set_color(<span class="variable">colors</span>[<span class="string">'grey'</span>])
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">def</span> <span class="variable">plot_ma</span>(<span class="variable">plot</span>, <span class="variable">x</span>, <span class="variable">y</span>):
+                        <span class="variable">mov_avg</span> = {
+                            <span class="string">'MA (50)'</span>: {<span class="string">'Range'</span>: <span class="number">50</span>, <span class="string">'Color'</span>: <span class="variable">colors</span>[<span class="string">'orange'</span>]}, 
+                            <span class="string">'MA (100)'</span>: {<span class="string">'Range'</span>: <span class="number">100</span>, <span class="string">'Color'</span>: <span class="variable">colors</span>[<span class="string">'green'</span>]}, 
+                            <span class="string">'MA (200)'</span>: {<span class="string">'Range'</span>: <span class="number">200</span>, <span class="string">'Color'</span>: <span class="variable">colors</span>[<span class="string">'red'</span>]}
+                        }
+                        
+                        <span class="keyword">for</span> <span class="variable">ma</span>, <span class="variable">ma_info</span> <span class="keyword">in</span> <span class="variable">mov_avg</span>.items():
+                            <span class="variable">plot</span>.plot(
+                                <span class="variable">x</span>, <span class="variable">y</span>.rolling(<span class="variable">ma_info</span>[<span class="string">'Range'</span>]).mean(), 
+                                color=<span class="variable">ma_info</span>[<span class="string">'Color'</span>], label=<span class="variable">ma</span>, linewidth=2, ls=<span class="string">'--'</span>
+                            )
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">def</span> <span class="variable">get_prev_day_info</span>(<span class="variable">plot</span>):
+                        <span class="variable">previous_close</span> = '$' + str("{:,}".format(<span class="variable">stock_df</span>['Close'][<span class="number">0</span>])) 
+                        <span class="variable">previous_volume</span> = str("{:,}".format(<span class="variable">stock_df</span>['Volume'][<span class="number">0</span>]))
+                        <span class="variable">previous_date</span> = str(<span class="variable">stock_df</span>['Date'][<span class="number">0</span>].date())    
+                        <span class="variable">plot</span>.set_title(
+                            'Closing price on ' + <span class="variable">previous_date</span> + ': ' + 
+                             <span class="variable">previous_close</span>  + '\nShares traded on ' + <span class="variable">previous_date</span> +
+                             ': ' + <span class="variable">previous_volume</span>, fontdict=<span class="variable">config_title</span>, loc='<span class="string">left</span>'
+                        )
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">def</span> <span class="variable">get_charts</span>(<span class="variable">stock_data</span>):
+                        <span class="variable">plt</span>.rc('figure', figsize=(<span class="number">15</span>, <span class="number">10</span>))
+        
+                        <span class="variable">fig</span>, <span class="variable">axes</span> = <span class="variable">plt</span>.subplots(<span class="number">2</span>, <span class="number">1</span>,
+                                     gridspec_kw={'height_ratios': [<span class="number">3</span>, <span class="number">1</span>]})
+                        <span class="variable">fig</span>.tight_layout(pad=<span class="number">3</span>)
+        
+                        <span class="variable">date</span> = <span class="variable">stock_data</span>['Date']
+                        <span class="variable">close</span> = <span class="variable">stock_data</span>['Close']
+                        <span class="variable">vol</span> = <span class="variable">stock_data</span>['Volume']
+        
+                        <span class="variable">plot_price</span> = <span class="variable">axes</span>[<span class="number">0</span>]
+                        <span class="variable">plot_price</span>.plot(<span class="variable">date</span>, <span class="variable">close</span>, color=<span class="variable">colors</span>[<span class="string">'blue'</span>],
+                                    linewidth=<span class="number">2</span>, label=<span class="string">'Price'</span>)
+        
+                        <span class="variable">plot_vol</span> = <span class="variable">axes</span>[<span class="number">1</span>]
+                        <span class="variable">plot_vol</span>.bar(<span class="variable">date</span>, <span class="variable">vol</span>, width=<span class="number">15</span>, color=<span class="string">'darkgrey'</span>)
+        
+                        <span class="variable">plot_price</span>.yaxis.tick_right()
+                        <span class="variable">plot_price</span>.tick_params(axis=<span class="string">'both'</span>, **<span class="variable">config_ticks</span>)
+                        <span class="variable">plot_price</span>.set_ylabel(<span class="string">'Price (in USD)'</span>, fontsize=<span class="number">14</span>)
+                        <span class="variable">plot_price</span>.yaxis.set_label_position(<span class="string">"right"</span>)
+                        <span class="variable">plot_price</span>.yaxis.label.set_color(<span class="variable">colors</span>[<span class="string">'grey'</span>])
+                        <span class="variable">plot_price</span>.grid(axis=<span class="string">'y'</span>, color=<span class="string">'gainsboro'</span>,
+                                    linestyle=<span class="string">'-'</span>, linewidth=<span class="number">0.5</span>)
+                        <span class="variable">plot_price</span>.set_axisbelow(<span class="keyword">True</span>)
+        
+                        format_borders(<span class="variable">plot_price</span>)
+                        format_borders(<span class="variable">plot_vol</span>)
+        
+                        <span class="variable">fig</span>.suptitle(<span class="string">'TGT Price and Volume'</span>, size=<span class="number">36</span>, color=<span class="variable">colors</span>[<span class="string">'grey'</span>], x=<span class="number">0.24</span>, y=<span class="number">1.10</span>)
+                        get_prev_day_info(<span class="variable">plot_price</span>)
+                        plot_ma(<span class="variable">plot_price</span>, <span class="variable">date</span>, <span class="variable">close</span>)
+                        format_legend(<span class="variable">plot_price</span>)
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="jupyter-code-block">
+      <button class="copy-button" onclick="loader.copyCodeToClipboard(this)">
+        📋
+      </button>
+      <pre class="python">
+                    <span class="function">get_charts</span>(<span class="variable">stock_df</span>)
+                </pre>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="main-paragraph-text">
+      It appears the stock is mean reverting towards a cheaper value 📉 ...
+    </div>
+  </div>
+  <div class="container">
+    <img
+      src="{{ url_for('static', filename='images/stock-charts/target_stock_chart.svg') }}"
+      alt=""
+    />
+  </div>
+
+  <div class="container">
+    <div class="main-header">Observations</div>
+    <div class="main-paragraph-text">
+      Based on the current moving average projections, buying this stock in the
+      next year appears to be a favorable opportunity. The company currently
+      boasts a price-to-earnings (P/E) ratio of approximately 22, making it an
+      attractive value stock. Additionally, with no intangible assets in the
+      picture, the Price to Tangible Book Value (P/TBV) stands at 6.86. A P/TBV
+      ratio exceeding 1 indicates that the market highly values the company's
+      tangible assets, reflecting investor confidence and a willingness to pay a
+      premium for these assets.
+    </div>
+  </div>
+</div>

@@ -1,65 +1,96 @@
 <!DOCTYPE html>
 <html lang="html">
-
-<head>
+  <head>
     <title>Sam Adams Personal Website</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/btn.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/pushbar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/scrollbar.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/textgrow.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/python-theme.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='images/favicon.png') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/main.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/btn.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/pushbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/scrollbar.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/textgrow.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/loader.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/python-theme.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
 
-<body>
-
+  <body>
     <aside data-pushbar-id="top" data-pushbar-direction="top">
-        <div class="title"><span data-pushbar-close class="close">X</span></div>
-        <ul class="menu">
-            <li><a href="{{ url_for('main.home') }}">🏡 Home</a></li>
-            <li><a href="{{ url_for('main.about') }}">👨🏻‍🎓 About</a></li>
-            <li><a href="{{ url_for('main.projects') }}">🚧 Projects</a></li>
-            <li><a href="{{ url_for('main.resume') }}">📓 Resume</a></li>
-            <li><a href="https://github.com/AdamsIncorporated" target="_blank">🗃️ Github</a></li>
-        </ul>
+      <div class="title"><span data-pushbar-close class="close">X</span></div>
+      <ul class="menu">
+        <li><a href="{{ url_for('main.home') }}">🏡 Home</a></li>
+        <li><a href="{{ url_for('main.about') }}">👨🏻‍🎓 About</a></li>
+        <li>
+          <a href="{{ url_for('main.blog', section='home') }}">🖋️ Blog</a>
+        </li>
+        <li><a href="{{ url_for('main.projects') }}">🚧 Projects</a></li>
+        <li><a href="{{ url_for('main.resume') }}">📓 Resume</a></li>
+        <li>
+          <a href="https://github.com/AdamsIncorporated" target="_blank"
+            >🗃️ Github</a
+          >
+        </li>
+      </ul>
     </aside>
 
-    <div class="button-container"><button class="button-54" data-pushbar-target="top">Links</button></div>
+    <div class="button-container">
+      <button class="button-54" data-pushbar-target="top">Links</button>
+    </div>
 
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
+    {% with messages = get_flashed_messages() %} {% if messages %}
     <ul class="flashes">
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
+      {% for message in messages %}
+      <li>{{ message }}</li>
+      {% endfor %}
     </ul>
-    {% endif %}
-    {% endwith %}
-    
+    {% endif %} {% endwith %}
+
     <main class="pushbar_main_content particle-container">
-        {% block content %}
-        {% endblock %}
+      {% block content %} {% endblock %}
     </main>
 
-    <footer>
-    </footer>
+    <footer></footer>
+  </body>
 
-</body>
+  <!-- Import Scripts -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
 
-<!-- Import Scripts -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://unpkg.com/scrollreveal"></script>
-<script src="https://cdn.jsdelivr.net/npm/pushbar.js@1.0.0/src/pushbar.min.js"></script>
-
-<!-- Source Scripts-->
-<script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
-<script src="{{ url_for('static', filename='scripts/balance_sheet.js') }}"></script>
-<script src="{{ url_for('static', filename='scripts/particles.js') }}"></script>
-
+  <!-- Source Scripts-->
+  <script src="{{ url_for('static', filename='scripts/main.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/balance_sheet.js') }}"></script>
+  <script src="{{ url_for('static', filename='scripts/particles.js') }}"></script>
 </html>

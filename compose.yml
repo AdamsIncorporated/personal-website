@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  personal-website:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: personal-website
+    volumes:
+      - .:/personal-website
+    ports:
+      - "3000:3000"
+    env_file:
+      - .env

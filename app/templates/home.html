@@ -1,20 +1,132 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="section" id="section1" style="background-color: #303030;">
-    {% include "sections/intro.html" %}
-</div>
-<div class="section" id="section2" style="background-color: #202020;">
-    {% include "sections/about.html" %}
-</div>
-<div class="section" id="section3" style="background-color: #101010;">
-    {% include "sections/stock.html" %}
-</div>
-<div class="section" id="section4" style="background-color: #080808;">
-    {% include "sections/connect.html" %}
-</div>
-<div class="section" id="section5" style="background-color: #040404;">
-    {% include "sections/contact.html" %}
+<div class="section">
+    <!-- INTRO -->
+    <div class="container" style="display: flex; flex-direction: column;">
+        <div class="main-title" style="margin: 0.5% 0;">Sam Adams</div>
+        <div class="main-header" style="margin: 0.5% 0;">Financial Engineer 🧮</div>
+        <div style="display: flex; flex-direction: row;">
+            <div class="pixel-container">
+                <img class="pixel-image" src="{{ url_for('static', filename='images/intro/profile-pixel.jpg') }}">
+                <div class="pixel-overlay">
+                    <img src="{{ url_for('static', filename='images/intro/profile.jpg') }}">
+                </div>
+            </div>
+            <div style="margin: 0 2.5%; flex: 1;">
+                <div class="main-paragraph-text scrolling-text">
+                    I am a devoted aspiring financial engineer with a fervor for uncovering deep
+                    value and seizing alpha. "An investment in
+                    knowledge pays the best interest." - Ben Franklin
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ABOUT ME -->
+    <div class="pixel-gallery">
+        <div class="pixel-container">
+            <div class="pixel-content">
+                <img class="pixel-image" src="{{ url_for('static', filename='images/about/srv-pixel.jpg') }}">
+                <div class="pixel-overlay">
+                    <img src="{{ url_for('static', filename='images/about/srv.jpg') }}">
+                </div>
+            </div>
+            <div class="pixel-caption">
+                <div>If you know you know</div>
+            </div>
+        </div>
+        <div class="pixel-container">
+            <div class="pixel-caption">The 512</div>
+            <div class="pixel-content">
+                <img class="pixel-image" src="{{ url_for('static', filename='images/about/austin-pixel.jpg') }}">
+                <div class="pixel-overlay">
+                    <img src="{{ url_for('static', filename='images/about/austin.jpg') }}">
+                </div>
+            </div>
+        </div>
+        <div class="pixel-container">
+            <div class="pixel-content">
+                <img class="pixel-image" src="{{ url_for('static', filename='images/about/austin-postcard-pixel.jpg') }}">
+                <div class="pixel-overlay">
+                    <img src="{{ url_for('static', filename='images/about/austin-postcard.jpg') }}">
+                </div>
+            </div>
+            <div class="pixel-caption">Only the best city in Texas</div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="main-divider"></div>
+        <div class="main-header">
+            My Core Values 🌟
+        </div>
+        <div class="scrolling-text">
+            Integrity, Diligence, Curiosity
+        </div>
+        <div class="main-header">
+            My Obsession with Computers 🖥️
+        </div>
+        <div style="width: 500px;">
+            <img class="shadow" src="{{ url_for('static', filename='images/about/computer.gif') }}" alt>
+        </div>
+        <div class="scrolling-text">
+            Isn't it truly remarkable how computers can tackle immensely
+            intricate
+            problems in our contemporary world? I
+            hold the firm belief that abstraction can enable the achievement of
+            nearly any objective. The 21st century is
+            undoubtedly the era of information, where financial markets stand
+            entirely reliant on computers, and it's within
+            our hands to determine whether the outcome is favorable or not. I
+            possess the capability to craft original
+            solutions for your company, even those you might not have realized
+            you
+            needed.
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="container" style="display: flex; flex-direction: row;">
+        <div style="width: 30%;">
+            <img src="{{ url_for('static', filename='images/connect/coffee.gif') }}" alt="">
+        </div>
+        <div style="width: 70%;">
+            <div class="main-header">
+                Lets Connect!
+            </div>
+            <div class="scrolling-text">
+                Let's build something great together! My diverse skills and strategic approach help turn visions into
+                robust, lasting solutions.
+             </div>
+        </div>
+    </div>
+    <div id="form-section" class="container" style="display: flex; flex-direction: column;">
+    
+        <div style="width: 20%;">
+            <img src="{{ url_for('static', filename='images/contact/paper-airplane.gif') }}" alt="">
+        </div>
+        <div style="width: 100%;">
+            <form class="email-form" action="/email" method="post">
+                <h1>Contact Me</h1>
+                <div>
+                    <label for="first-name">First Name:</label>
+                    <input type="text" id="first-name" name="first-name" required><br><br>
+                </div>
+                <div>
+                    <label for="last-name">Last Name:</label>
+                    <input type="text" id="last-name" name="last-name" required><br><br>
+                </div>
+                <div>
+                    <label for="message">Message:</label><br>
+                </div>
+                <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
+    
+                <button class="button-54" type="submit" value="Submit">Send Email</button>
+            </form>
+        </div>
+    </div>
+    
+
 </div>
 
 {% endblock %}
