@@ -1,9 +1,43 @@
 {% extends "layout.html" %} {% block content %}
 
-<div class="blog">
-  <ul class="blog-content">
-    <li><a href="{{ url_for('main.blog', section='argentina') }}">Case Study of Agrentina Default</a></li>
-  </ul>
+<div class="blog-container">
+  <div class="main-header">Blogs</div>
+  <div class="blog">
+    <ul class="blog-content">
+      <li>
+        <a href="{{ url_for('main.blog', section='argentina') }}">
+          Case Study of Argentina Default
+        </a>
+        <div class="blog-img">
+          <img src="{{ url_for('static', filename='images/blogs/argentina/argentina_default.png') }}" alt="Argentina">
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="blog">
+    <ul class="blog-content">
+      <li>
+        <a href="{{ url_for('main.blog', section='target') }}">
+          Dive Into Target Post Pandemic
+        </a>
+        <div class="blog-img">
+          <img src="{{ url_for('static', filename='images/blogs/target/target.png') }}" alt="Target">
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="blog">
+    <ul class="blog-content">
+      <li>
+        <a href="{{ url_for('main.blog', section='energy_recovery') }}">
+          Energy Recovery
+        </a>
+        <div class="blog-img">
+          <img src="{{ url_for('static', filename='images/blogs/energy_recovery/energy_recovery.jpg') }}" alt="Energy Recovery">
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 
 {% endblock %}

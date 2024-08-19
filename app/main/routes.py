@@ -6,6 +6,8 @@ from flask import (
     request,
     url_for,
     flash,
+    Response,
+    current_app
 )
 import smtplib
 from email.message import EmailMessage
@@ -34,15 +36,25 @@ def about():
 
 @main.route("/blog/<string:section>")
 def blog(section):
+    render = True
+    
     match section:
         case "argentina":
             file_name = "blogs/International Economics Project 1.html"
         case "target":
             file_name = "blogs/target.html"
+        case "energy_recovery":
+            file_path = os.path.join(current_app.root_path, "templates", "blogs", "Energy Recovery.html")
+            render = False
         case "home":
             file_name = "blog.html"
 
-    return render_template(f"{file_name}", title="Blog")
+    if render: 
+        return render_template(f"{file_name}", title="Blog")
+    else: 
+        with open(file_path, 'r') as file:
+            raw_html = file.read()
+        return Response(raw_html, mimetype='text/html')
 
 
 @main.route("/projects")
